@@ -954,21 +954,144 @@
           </aside>
 
           <p>
-            <a href="#cryptosuites-diagram"></a> provides an overall view of the cryptosuites defined by the recommendations.
+            <a href="#cryptosuites-table"></a> provides an overall view of the cryptosuites defined by the recommendations.
             They all implement the general pipeline of proof generation as described in <a href="#proof-generation-steps">section 4.2.1</a>.
             One axis of differentiation is the data transformation function, i.e., the canonicalization of the JSON serialization: cryptosuites whose name include the term <code>rdfc</code> use of RDF Dataset Canonicalization (RDFC-1.0) [[RDF-CANON]], while the term <code>jcs</code> refers to the usage of the JSON Canonicalization (JCS) [[RFC8785]] instead.
             The other axis is whether the cryptosuite provides selective disclosure, which is the case for BBS and all other suites whose name include the term <code>sd</code> (all selective disclosure schemes use RDFC).
-            Finally, the <code>ecdsa-xi-2023</code> suite is a variant of <code>ecdsa-rdfc-2019</code> which allows the inclusion of additional, external data to be "added" to the canonicalized JSON data before signature.
-          </p>
+             The third axis is whether the cryptographic signature algorithm is quantum resistant or not (with quantum computers coming to the fore, there is a non-zero
+            probability that, within a few years, the private keys of non-resistant signature functions may be broken, hence the importance of this axis).
+            The <code>ecdsa-xi-2023</code> suite is a variant of <code>ecdsa-rdfc-2019</code> which allows the inclusion of additional, external data to be "added" to the canonicalized JSON data before signature.
+         </p>
 
-          <figure id="cryptosuites-diagram">
-            <img style="margin: auto; display: block; width: 90%;" src="diagrams/cryptosuites.svg" alt="The image is a flowchart showing the categorization of various cryptographic suites and their respective canonicalization methods. The chart branches from an initial box labeled 'Cryptosuites', to 7 boxes, each branching to one or more boxes. The seven boxes are labeled
-            with the name of crypto algorithms, further branching into bxses with the names of cryptosuites.
-            The content are (1) algorithm EdDSA, branching to eddsa-rdfc-2022 and eddsa-jcs-2022; (2) algorithm ECDSA, branching to ecdsa-rdfc-2019, ecdsa-jcs-2019, ecdsa-sd-2023, and ecdsa-xi-2023; (3) algorithm BBS branching to bbs-2023; (4) algorithm ML-DSA-44, branching to mldsa44-rdfc-2024, mldsa44-jcs-2024, and mldsa44-sd-2024; (5) SLH-DSA-SHA2-128s, branching to slhdsaq128-rdfc-2024, slhdsaq128-jcs-2024, and slhdsaq128-sd-2024; (6) algorithm Falcon512, branching to falcon512-rdfc-2024, falcon512-jcs-2024, and falcon512-sd-2024; (7) algorithm SQIsign-1, branching to sqisign1-rdfc-2024 and sqisign1-jcs-2024.">
-            <figcaption style="text-align: center;">
-              Overall view of cryptosuites.
-            </figcaption>
-          </figure>
+          <table id="cryptosuites-table" class="data numbered">
+            <caption>Data integrity cryptosuites.</caption>
+            <thead>
+                <tr>
+                    <th>Cryptosuite</th>
+                    <th>Identifier</th>
+                    <th>Canonicalization</th>
+                    <th>Selective disclosure?</th>
+                    <th>Quantum resistant?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">EdDSA</td>
+                    <td><code>eddsa-rdfc-2022</code></td>
+                    <td>RDFC</td>
+                    <td>no</td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td><code>eddsa-jcd-2022</code></td>
+                    <td>JCS</td>
+                    <td>no</td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">ECDSA</td>
+                    <td><code>ecdsa-rdfc-2019</code></td>
+                    <td>RDFC</td>
+                    <td>no</td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td><code>ecdsa-jcd-2019</code></td>
+                    <td>JCS</td>
+                    <td>no</td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td><code>ecdsa-sd-2019</code></td>
+                    <td>RDFC</td>
+                    <td>yes</td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td><code>ecdsa-xi-2023</code></td>
+                    <td>RDFC</td>
+                    <td>no</td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td>BBS</td>
+                    <td><code>bbs-2023</code></td>
+                    <td>RDFC</td>
+                    <td>yes</td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">ML-DSA-44</td>
+                    <td><code>mldsa44-rdfc-2024</code></td>
+                    <td>RDFC</td>
+                    <td>no</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td><code>mldsa44-jcs-2024</code></td>
+                    <td>JCS</td>
+                    <td>no</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td><code>mldsa44-sd-2024</code></td>
+                    <td>RDFC</td>
+                    <td>yes</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">SLH-DSA-SHA2-128s</td>
+                    <td><code>slhdsa128-rdfc-2024</code></td>
+                    <td>RDFC</td>
+                    <td>no</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td><code>slhdsa128-jcs-2024</code></td>
+                    <td>JCS</td>
+                    <td>no</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td><code>slhdsa128-sd-2024</code></td>
+                    <td>RDFC</td>
+                    <td>yes</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">FALCON-512</td>
+                    <td><code>falcon512-rdfc-2024</code></td>
+                    <td>RDFC</td>
+                    <td>no</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td><code>falcon512-jcs-2024</code></td>
+                    <td>JCS</td>
+                    <td>no</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td><code>falcon512-sd-2024</code></td>
+                    <td>RDFC</td>
+                    <td>yes</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">SQIsign-I</td>
+                    <td><code>sqisign1-rdfc-2024</code></td>
+                    <td>RDFC</td>
+                    <td>no</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td><code>sqisign1-jcs-2024</code></td>
+                    <td>JCS</td>
+                    <td>no</td>
+                    <td>yes</td>
+                </tr>
+           </tbody>
+          </table>
 
 
           <p class="note">
@@ -981,6 +1104,8 @@
             Applications may define their own cryptosuites by applying different transformation and/or cryptographic signature schemes in similar patterns.
             For example, it would be possible to define a cryptosuite using the SM2 algorithm [[RFC9563]] instead of, say, EdDSA.
           </p>
+
+          <aside class="issue">Are all the algorithm names correct in the table?</aside>
 
           <section>
             <h5>Full Disclosure Schemes</h5>
@@ -1028,17 +1153,14 @@
               This is based on the mathematical nature of the BBS scheme: the <em>BBS signature</em> of all the claims (generated by the issuer and part of the base proof) can be reused by the holder to generate a <em>BBS Proof</em> of the subset of the claims (which is part of the derived proof). The BBS specific verification step ensures the required trust.
             </p>
 
-            <aside class="ednote">I am not sure what happens for Quantum safe suites.</aside>
-
             <p>
               It is worth noting that the `bbs-2023` cryptosuite also offers a number of additional, privacy preserving options; see the sections on
               <a data-cite="VC-DI-BBS#pseudonyms-with-hidden-pid">anonymous holder biding</a>,
               <a data-cite="VC-DI-BBS#pseudonyms-with-issuer-known-pid">pseudonyms with issuer-known id</a>, or
               <a data-cite="VC-DI-BBS#pseudonyms-with-hidden-pid">pseudonyms with hidden id</a> in the [[[VC-DI-BBS]]] specification.
             </p>
-          </section>
-
-          <aside class="issue" data-number="29"></aside>
+            <aside class="issue">Review is requested on SD, to check that the general description is valid for QR schemes as well.</aside>
+        </section>
 
         </section>
 
