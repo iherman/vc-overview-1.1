@@ -138,18 +138,54 @@
         alternateFormats: [ {uri: "diff-20111214.html", label: "diff to previous version"} ],
         */
         localBiblio: {
-          "CFRG-BBS-SIGNATURE": {
-            title: "The BBS Signature Scheme",
-            href: "https://www.ietf.org/archive/id/draft-irtf-cfrg-bbs-signatures-05.html",
-            authors: [
-              "Tobias Looker",
-              "Vasilis Kalos",
-              "Andrew Whitehead",
-              "Mike Lodder",
-            ],
-            status: "I-D",
-            publisher: "IETF"
-          }
+            "VC-DI-QUANTUM-RESISTANT" : {
+                title: "Quantum-Resistant Cryptosuites v1.0",
+                authors: [
+                    "Greg Bernstein", "Manu Sporny"
+                ],
+                publisher: "W3C",
+                href: "https://www.w3.org/TR/vc-di-quantum-resistant"
+            },
+            "FIPS-204": {
+                title: "Module-Lattice-Based Digital Signature Standard",
+                authors: [],
+                date: "August 2024",
+                publisher: "Federal Information Processing Standards",
+                href: "https://csrc.nist.gov/pubs/fips/204/final"
+            },
+            "FIPS-205": {
+                title: "Stateless Hash-Based Digital Signature Standard",
+                authors: [],
+                date: "August 2024",
+                publisher: "Federal Information Processing Standards",
+                href: "https://csrc.nist.gov/pubs/fips/205/final"
+            },
+            "FALCON": {
+                title: "Fast-Fourier Lattice-based Compact Signatures over NTRU",
+                authors: [],
+                // date: "August 2024",
+                // publisher: "",
+                href: "https://falcon-sign.info/"
+            },
+            "SQIsign": {
+                title: "SQI Sign",
+                authors: [],
+                // date: "August 2024",
+                // publisher: "",
+                href: "https://sqisign.org/"
+            },
+            "CFRG-BBS-SIGNATURE": {
+                title: "The BBS Signature Scheme",
+                href: "https://www.ietf.org/archive/id/draft-irtf-cfrg-bbs-signatures-05.html",
+                authors: [
+                    "Tobias Looker",
+                    "Vasilis Kalos",
+                    "Andrew Whitehead",
+                    "Mike Lodder",
+                ],
+                status: "I-D",
+                publisher: "IETF"
+            }
         },
         postProcess: [
           window.respecVc.createVcExamples
@@ -269,7 +305,7 @@
 
         <p>
           The general structure for embedded proofs is defined in a separate [[[VC-DATA-INTEGRITY]]] [[VC-DATA-INTEGRITY]] specification.
-          The Working Group also specifies some instances of this general structure in the form of the "cryptosuites": [[[VC-DI-EDDSA]]] [[VC-DI-EDDSA]], [[[VC-DI-ECDSA]]] [[VC-DI-ECDSA]], and [[[VC-DI-BBS]]] [[VC-DI-BBS]].
+          The Working Group also specifies some instances of this general structure in the form of the "cryptosuites": [[[VC-DI-EDDSA]]] [[VC-DI-EDDSA]], [[[VC-DI-ECDSA]]] [[VC-DI-ECDSA]], [[[VC-DI-BBS]]] [[VC-DI-BBS]], and [[[VC-DI-QUANTUM-RESISTANT]]] [[VC-DI-QUANTUM-RESISTANT]].
           Other cryptosuites may be specified by the community.
         </p>
 
@@ -292,12 +328,14 @@
 
         <div class="note">
           <p>
-            As of May 2025, all but two of these documents have been published as W3C "Recommendations", which is the W3C terminology for Web Standards.
-            The two exceptions are the [[[VC-JSON-SCHEMA]]] and the [[[VC-DI-BBS]]] specifications; though technically complete, they are still "Candidate" Recommendations.
+            In 2025, a majority of documents have been published as W3C "Recommendations", which is the W3C terminology for Web Standards.
+            The two exceptions were the [[[VC-JSON-SCHEMA]]] and the [[[VC-DI-BBS]]] specifications; though technically complete, they are still "Candidate" Recommendations.
             The reasons are different. The former has not yet been implemented by at least two mutually independent implementations (which is the requirement to be published as standards) whereas the latter has to wait until the underlying cryptographic technique (i.e., [[[CFRG-BBS-SIGNATURE]]]) is finalized by the IETF.
             It is expected that these two documents will be published as Web Standards soon.
           </p>
-
+          <p>
+            A revision cycle for some of the specifications has started in 2026. A number of documents have been re-issued as Working Drafts (marked with a higher minor version number), and a number of new specifications have been added to become, eventually, Recommendations. The official <a href="https://www.w3.org/groups/wg/vc/publications/">publication list</a> of the Working Group shows the exact status of the respective documents.
+          </p>
         </div>
       </section>
     </section>
@@ -852,20 +890,26 @@
           <h4>Cryptosuites</h4>
 
           <p>
-            The Working Group has published three cryptosuite documents: [[[VC-DI-EDDSA]]] [[VC-DI-EDDSA]], [[[VC-DI-ECDSA]]] [[VC-DI-ECDSA]], and [[[VC-DI-BBS]]] [[VC-DI-BBS]].
-            As their name suggests, the documents rely on existing cryptographic signature schemes: the Edwards-Curve Digital Signature Algorithm (EdDSA) specification [[RFC8032]], the Elliptic Curve Digital Signature Algorithm (ECDSA) specification [[FIPS-186-5]], and the BBS Signature Scheme [[CFRG-BBS-SIGNATURE]], respectively.
+            The Working Group has published several cryptosuite documents: [[[VC-DI-EDDSA]]] [[VC-DI-EDDSA]], [[[VC-DI-ECDSA]]] [[VC-DI-ECDSA]], [[[VC-DI-BBS]]] [[VC-DI-BBS]], and [[[VC-DI-QUANTUM-RESISTANT]]] [[VC-DI-QUANTUM-RESISTANT]].
+            As their name suggests, the documents rely on existing cryptographic signature schemes: the Edwards-Curve Digital Signature Algorithm (EdDSA) specification [[RFC8032]], the Elliptic Curve Digital Signature Algorithm (ECDSA) specification [[FIPS-186-5]], the BBS Signature Scheme [[CFRG-BBS-SIGNATURE]], and a collection of quantum resistant schemes, namely the Module-Lattice-Based Digital Signature Standard (ML-DSA) [[FIPS-204]], the Stateless Hash-Based Digital Signature Standard (SHL-DSA) [[FIPS-205]], the FAst Fourier Lattice-based COmpact signatures over NTRU [[FALCON]], and the SQISign [[SQIsign]].
           </p>
 
+          <aside>
+            The list of quantum resistant signature schemes may still change, depending on the stability and acceptance of the underlying cryptographic algorithm.
+          </aside>
+
           <p>
-            <a href="#cryptosuites-diagram"></a> provides an overall view of the six cryptosuites defined by the three recommendations.
+            <a href="#cryptosuites-diagram"></a> provides an overall view of the cryptosuites defined by the recommendations.
             They all implement the general pipeline of proof generation as described in <a href="#proof-generation-steps">section 4.2.1</a>.
-            As shown on the figure, one axis of differentiation is the data transformation function, i.e., the canonicalization of the JSON serialization: two cryptosuites use JSON Canonicalization (JCS) [[RFC8785]], while the other four use RDF Dataset Canonicalization (RDFC-1.0) [[RDF-CANON]].
-            The other axis is whether the cryptosuite provides selective disclosure, which is the case for two of the six
-            cryptosuites.
+            One axis of differentiation is the data transformation function, i.e., the canonicalization of the JSON serialization: cryptosuites whose name include the term <code>rdfc</code> use of RDF Dataset Canonicalization (RDFC-1.0) [[RDF-CANON]], while the term <code>jcs</code> refers to the usage of the JSON Canonicalization (JCS) [[RFC8785]] instead.
+            The other axis is whether the cryptosuite provides selective disclosure, which is the case for BBS and all other suites whose name include the term <code>sd</code> (all selective disclosure schemes use RDFC).
+            Finally, the <code>ecdsa-xi-2023</code> suite is a variant of <code>ecdsa-rdfc-2019</code> which allows the inclusion of additional, external data to be "added" to the canonicalized JSON data before signature.
           </p>
 
           <figure id="cryptosuites-diagram">
-            <img style="margin: auto; display: block; width: 90%;" src="diagrams/cryptosuites.svg" alt="The image is a flowchart showing the categorization of various cryptographic suites and their respective canonicalization methods. The chart branches from an initial box labeled 'Cryptosuites', to three main cryptosuite documents: 'EdDSA (based on Edwards curves)', 'ECDSA (based on ECDSA curves)', and 'BBS (based on BBS schemes)'. The EdDSA suite further divides into two specific cryptosuites: 'eddsa-rdfc-2022 (using RDFC-1.0 for canonicalization)' and 'eddsa-jcs-2022 (using JCS for canonicalization)'. The ECDSA suite branches into three specific cryptosuites: 'ecdsa-rdfc-2019 (using RDFC-1.0 or canonicalization)', 'ecdsa-jcs-2019 (using JCS canonicalization)', and 'ecdsa-sd-2023 (using RDFC-1.0 for canonicalization and providing selective disclosure schemes)'. The BBS suite splits into one method: 'bbs-2023 (using RDFC-1.0 for canonicalization and providing selective disclosure schemes)'. There is an additional dotted lozenge, labeled 'Selective disclosure schemes', which contains the 'ecdsa-sd-2023' and 'bbs-2023' documents.">
+            <img style="margin: auto; display: block; width: 90%;" src="diagrams/cryptosuites.svg" alt="The image is a flowchart showing the categorization of various cryptographic suites and their respective canonicalization methods. The chart branches from an initial box labeled 'Cryptosuites', to 7 boxes, each branching to one or more boxes. The seven boxes are labeled
+            with the name of crypto algorithms, further branching into bxses with the names of cryptosuites.
+            The content are (1) algorithm EdDSA, branching to eddsa-rdfc-2022 and eddsa-jcs-2022; (2) algorithm ECDSA, branching to ecdsa-rdfc-2019, ecdsa-jcs-2019, ecdsa-sd-2023, and ecdsa-xi-2023; (3) algorithm BBS branching to bbs-2023; (4) algorithm ML-DSA-44, branching to mldsa44-rdfc-2024, mldsa44-jcs-2024, and mldsa44-sd-2024; (5) SLH-DSA-SHA2-128s, branching to slhdsaq128-rdfc-2024, slhdsaq128-jcs-2024, and slhdsaq128-sd-2024; (6) algorithm Falcon512, branching to falcon512-rdfc-2024, falcon512-jcs-2024, and falcon512-sd-2024; (7) algorithm SQIsign-1, branching to sqisign1-rdfc-2024 and sqisign1-jcs-2024.">
             <figcaption style="text-align: center;">
               Overall view of cryptosuites.
             </figcaption>
@@ -887,15 +931,14 @@
             <h5>Full Disclosure Schemes</h5>
 
             <p>
-              The two EdDSA cryptosuites, as well as `ecdsa-rdfc-2019` and `ecdsa-jcs-2019`, follow a simple version of the proof generation pipeline as described in <a href="#proof-generation-steps">section 4.2.1</a>: the Credential is canonicalized (using either JCS or RDFC-1.0) and the result is hashed (using the hash functions as defined by the signature key).
+              The full disclosue cryptosuites (i.e., the ones whose name contain the <code>rdfc</code> or <code>jcs</code> terms) follow a simple version of the proof generation pipeline as described in <a href="#proof-generation-steps">section 4.2.1</a>: the Credential is canonicalized (using either JCS or RDFC-1.0) and the result is hashed (using the hash functions as defined by the signature key).
               The calculation of the hash values depend on the canonicalization method: in the JCS case the canonical JSON data is hashed directly, whereas
               in the RDFC-1.0 case the individual canonicalized claims are first sorted and then concatenated before being hashed.
             </p>
             <p>
-              However, before signing the hash values, there is an extra twist: the same pipeline is also used on a set of claims called <em>proof options</em>, i.e., all the claims
-              of the proof graph <em>except</em> `proofValue`.
+              However, before signing the hash values, there is an extra twist: the same pipeline is also used on a set of claims called <em>proof options</em>, i.e., all the claims of the proof graph <em>except</em> `proofValue`.
               This set of claims is also canonicalized and hashed, following the same process as for the Credential itself, yielding a second hash value.
-              <em>It is the concatenation of these two values</em> that is signed by EdDSA or ECDSA, respectively, producing the value for the `proofValue` property.
+              <em>It is the concatenation of these two values</em> that is signed by EdDSA, ECDSA, or one of the quantum resistant schemes, respectively, producing the value for the `proofValue` property.
               By doing so, the various proof metadata, as well as the public key reference itself, are also signed and become verifiable.
            </p>
 
@@ -905,8 +948,8 @@
             <h5>Selective Disclosure Schemes</h5>
 
             <p>
-              The `ecdsa-sd-2023` and `bbs-2023` cryptosuites provide selective disclosures of individual claims.
-              In both cases, the process separates the <em>base proof</em> (calculated by the issuer for the holder), and the <em>derived proof</em> (which is typically calculated by the holder when selectively presenting credential claims to the verifier).
+              The `bbs-2023`, and the cryptosuites marked with <code>sd</code> in their name provide selective disclosures of individual claims.
+              In all cases, the process separates the <em>base proof</em> (calculated by the issuer for the holder), and the <em>derived proof</em> (which is typically calculated by the holder when selectively presenting credential claims to the verifier).
             </p>
 
             <p>
@@ -930,6 +973,8 @@
               This is based on the mathematical nature of the BBS scheme: the <em>BBS signature</em> of all the claims (generated by the issuer and part of the base proof) can be reused by the holder to generate a <em>BBS Proof</em> of the subset of the claims (which is part of the derived proof). The BBS specific verification step ensures the required trust.
             </p>
 
+            <aside class="ednote">I am not sure what happens for Quantum safe suites.</aside>
+
             <p>
               It is worth noting that the `bbs-2023` cryptosuite also offers a number of additional, privacy preserving options; see the sections on
               <a data-cite="VC-DI-BBS#pseudonyms-with-hidden-pid">anonymous holder biding</a>,
@@ -937,6 +982,9 @@
               <a data-cite="VC-DI-BBS#pseudonyms-with-hidden-pid">pseudonyms with hidden id</a> in the [[[VC-DI-BBS]]] specification.
             </p>
           </section>
+
+          <aside class="issue" data-number="29"></aside>
+
         </section>
 
         <section>
