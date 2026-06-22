@@ -96,7 +96,7 @@
                     },
                     {
                         name: "Isaac Henderson Johnson Jeyakumar",
-                        company: "Fraunhofer IAO, Germany",
+                        company: "Fraunhofer IAO",
                         w3cid: 140218,
                     },
                     {
@@ -338,7 +338,7 @@
                 </p>
 
                 <p>
-                    The [[[vc-data-model-2.0]]] [[vc-data-model-2.0]] specification, which defines the core concepts that all other
+                    The [[[vc-data-model]]] [[vc-data-model]] specification, which defines the core concepts that all other
                     specifications depend on, plays a central role. The model is defined in abstract terms, and applications express their
                     specific credentials using a serialization of the data model. The current specifications mostly use a JSON
                     serialization; the community may develop other serializations in the future.
@@ -384,7 +384,7 @@
                 </p>
 
                 <p>
-                    Finally, the [[[cid-1.0]]] [[cid-1.0]] specification defines some common terms (e.g., verification
+                    Finally, the [[[cid]]] [[cid]] specification defines some common terms (e.g., verification
                     <a data-cite="CID-1.0#verification-relationships">relationships</a>
                     and
                     <a data-cite="CID-1.0#dfn-verification-method">methods</a>) that are used not only by other Verifiable Credential
@@ -395,7 +395,7 @@
                     <img
                         style="margin: auto; display: block; width: 100%"
                         src="diagrams/VCWG_specifications.svg"
-                        alt="Diagram illustrating the structure of the Verifiable Credential (VC) specifications, using boxes labeled with references to the specification. Arrows on the diagram connect some of the boxes to represent (normative) dependencies. The box labeled as the VC Data Model is at the top-center of the diagram. Additional component boxes — such as JSON Schema for structural checking; Bitstring Status List for publishing status information; and Controlled Identifiers for verification methods and relationships — are related to the VC Data Model. The box for securing mechanisms contain separate boxes for embedded proofs, on the left, and enveloping proofs, on the right. The box for embedded proofs contains a box labeled as Data Integrity, which depends both on the VC Data Model and on Controlled Identifiers, as well as boxes for the ECDSA, EdDSA, and BBS Cryptosuites, supporting different elliptic curves and signature schemes; all of these depend on Data Integrity, and the BBS Cryptosuites also depend on ECDSA. The enveloping proofs box contains a single box labeled as 'JOSE and COSE ... using JWS, SD-JWT, or CBOR'; as with Data Integrity, this depends both on the VC Data Model and on Controlled Identifiers."
+                        alt="Diagram illustrating the structure of the Verifiable Credential (VC) specifications, using boxes labeled with references to the specification. Arrows on the diagram connect some of the boxes to represent (normative) dependencies. The box labeled as the VC Data Model is at the top-center of the diagram. Additional component boxes — such as Render Methods for specify preferred ways tp express a VC to the end user; VC Barcodes to express a VC in the form of a barcode; JSON Schema for structural checking; VC Recognized entities for secure the issuer are part of a specific ecosystem; VCALM for APIs for VC Lifecycle Management; Confidence Methods to specify ways to increase confidence for a verifier in a VC; Bitstring Status List for publishing status information; VC FOrgery Defense to publish an indexed list of compact fingerprints; and Controlled Identifiers for verification methods and relationships — are related to the VC Data Model. The box for securing mechanisms contain separate boxes for embedded proofs, on the left, and enveloping proofs, on the right. The box for embedded proofs contains a box labeled as Data Integrity, which depends both on the VC Data Model and on Controlled Identifiers, as well as boxes for the ECDSA, EdDSA, BBS, and Quantum Resistant Cryptosuites, supporting different elliptic curves and signature schemes; all of these depend on Data Integrity. The enveloping proofs box contains a single box labeled as 'JOSE and COSE ... using JWS, SD-JWT, or CBOR'; as with Data Integrity, this depends both on the VC Data Model and on Controlled Identifiers."
                     />
                     <figcaption style="text-align: center">Verifiable Credentials Working Group Recommendations</figcaption>
                 </figure>
@@ -454,7 +454,7 @@
 
             <p>
                 For a more precise definition of these roles, as well as other roles, see the relevant
-                <a data-cite="vc-data-model-2.0#ecosystem-overview">section</a>
+                <a data-cite="vc-data-model#ecosystem-overview">section</a>
                 in the data model specification.
             </p>
 
@@ -490,7 +490,7 @@
                         entities referred to, usually, by a [[url]]. In that case, that entity may become the subject of another claim;
                         these claims, together, form a "graph" of claims that represents a Credential. (See
                         <a href="#credential-example-claims"></a> for an example of such a graph represented graphically. For more complex
-                        examples, refer to the [[[vc-data-model-2.0]]] specification itself.)
+                        examples, refer to the [[[vc-data-model]]] specification itself.)
                     </p>
 
                     <figure id="basic-structure">
@@ -505,7 +505,7 @@
                     </figure>
 
                     <p>
-                        The [[[vc-data-model-2.0]]] document specifies a number of standard properties. These include, for example,
+                        The [[[vc-data-model]]] document specifies a number of standard properties. These include, for example,
                         `credentialSubject`, `type`, `issuer`, or `validFrom`. Developers may define their own properties to express
                         specific types of Credentials, like a driving license, a university degree, or a marriage certificate.
                     </p>
@@ -525,7 +525,7 @@
 
                     <p>
                         For a more detailed description of abstract Verifiable Credentials, with examples, see the relevant
-                        <a data-cite="vc-data-model-2.0#credentials">section</a>
+                        <a data-cite="vc-data-model#credentials">section</a>
                         in the data model specification.
                     </p>
 
@@ -560,7 +560,7 @@
 
                     <p>
                         For a more detailed description of abstract Verifiable Presentations, with examples, see the relevant
-                        <a data-cite="vc-data-model-2.0#presentations">section</a>
+                        <a data-cite="vc-data-model#presentations">section</a>
                         in the data model specification.
                     </p>
 
@@ -579,19 +579,19 @@
                 <h3>Serialization in JSON</h3>
 
                 <p>
-                    In the [[vc-data-model-2.0]] specification, as in the other documents, Verifiable Credentials and Presentations are
+                    In the [[vc-data-model]] specification, as in the other documents, Verifiable Credentials and Presentations are
                     mostly expressed in JSON [[rfc7519]], more specifically [[json-ld11]]. In this serialization, properties of claims are
                     represented as JSON names, and values as JSON literals or objects. Subjects of claims are either explicitly identified
                     by an `id` property, or implicitly by appearing as an object of another claim.
                 </p>
 
                 <p id="p_vocabularies">
-                    Standard properties defined by the [[vc-data-model-2.0]] form a distinct set of JSON names, referred to as a (standard)
+                    Standard properties defined by the [[vc-data-model]] form a distinct set of JSON names, referred to as a (standard)
                     <em>vocabulary</em>. An important characteristic of Verifiable Credentials in JSON-LD is that it favors a decentralized
                     and permissionless approach to <em>extend</em> to a new application area through application-specific set of properties,
                     i.e., vocabularies, distributed on the Web. Anyone can "publish" such a vocabulary, following some rules described in
                     the
-                    <a data-cite="vc-data-model-2.0#extensibility">extensibility section</a>
+                    <a data-cite="vc-data-model#extensibility">extensibility section</a>
                     of the specification.
                 </p>
 
@@ -817,7 +817,7 @@
                     >), CBOR Object Signing and Encryption (COSE) [[rfc9052]], or Selective Disclosure for JWTs [[rfc9901]]. These are all
                     IETF specifications, or groups of specifications (like JOSE, that refers to JWT [[rfc7519]], JWS [[rfc7515]], or
                     JWK [[rfc7517]]). The [[[vc-jose-cose]]] [[vc-jose-cose]] recommendation defines a "bridge" between these and the
-                    [[[vc-data-model-2.0]]], specifying the suitable header claims, media types, etc.
+                    [[[vc-data-model]]], specifying the suitable header claims, media types, etc.
                 </p>
 
                 <p>
@@ -1706,7 +1706,7 @@
 
             <p>
                 In particular, sections
-                <a data-cite="vc-data-model-2.0#terms-of-use">Terms of Use</a>
+                <a data-cite="vc-data-model#terms-of-use">Terms of Use</a>
                 in the Data Model specification, and the
                 <a href="https://w3c.github.io/vc-imp-guide/#subject-holder-relationships">Subject-Holder Relationships</a>
                 section in the Verifiable Credentials Implementation Guide [[vc-imp-guide]] specify how a verifier can determine:
