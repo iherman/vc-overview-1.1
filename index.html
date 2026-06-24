@@ -338,16 +338,27 @@
                 </p>
 
                 <p>
-                    The [[[vc-data-model]]] [[vc-data-model]] specification, which defines the core concepts that all other
-                    specifications depend on, plays a central role. The model is defined in abstract terms, and applications express their
-                    specific credentials using a serialization of the data model. The current specifications mostly use a JSON
-                    serialization; the community may develop other serializations in the future.
+                    The [[[vc-data-model]]] [[vc-data-model]] specification, which defines the core concepts that all other specifications
+                    depend on, plays a central role. The model is defined in abstract terms, and applications express their specific
+                    credentials using a serialization of the data model. The current specifications use a JSON serialization; the community
+                    may develop other serializations in the future.
                 </p>
 
                 <p>
                     When Verifiable Credentials are serialized in JSON, it is important to trust that the structure of a Credential may be
                     interpreted in a consistent manner by all participants in the verifiable credential ecosystem. The
                     [[[vc-json-schema]]] [[vc-json-schema]] defines how [[json-schema]] can be used for that purpose.
+                </p>
+
+                <p>
+                    The [[[vc-confidence-method]]] [[vc-confidence-method]] specification defines an extensible mechanism that issuers can
+                    use to increase the confidence of verifiers in the legitimacy of the presentation of a given credential.
+                </p>
+
+                <p>
+                    The [[[vc-render-method]]] [[vc-render-method]] specification defines an extensible mechanism that issuers can use to
+                    provide preferred mechanisms for the presentation of a credential. These presentations may use images, simple cards in a
+                    digital wallet, braille output, or complex visual representations.
                 </p>
 
                 <p>
@@ -372,9 +383,7 @@
                 <p>
                     The [[[vc-forgery-defense]]] [[vc-forgery-defense]] defines a mechanism for issuers of verifiable credentials to publish
                     indexed lists of compact cryptographic witnesses. This is an extra layer of security for verifiable credentials that are
-                    already issued, but whose signature keys may be compromised. This specification is complementary to the publication of
-                    quantum-resistant cryptosuites and is motivated by the same threat: quantum computers, capable of breaking the private
-                    keys of some of the widely used cryptographic schemes, may come to the fore in a few years.
+                    already issued, but whose signature keys may be compromised.
                 </p>
 
                 <p>
@@ -385,9 +394,9 @@
 
                 <p>
                     Finally, the [[[cid]]] [[cid]] specification defines some common terms (e.g., verification
-                    <a data-cite="CID-1.0#verification-relationships">relationships</a>
+                    <a data-cite="cid-1.0#verification-relationships">relationships</a>
                     and
-                    <a data-cite="CID-1.0#dfn-verification-method">methods</a>) that are used not only by other Verifiable Credential
+                    <a data-cite="cid-1.0#dfn-verification-method">methods</a>) that are used not only by other Verifiable Credential
                     specifications, but also other Recommendations such as [[[did-core]]] [[did-core]].
                 </p>
 
@@ -422,8 +431,6 @@
         </section>
 
         <section>
-            <!--MARK: Ecosystem Overview -->
-
             <h3>Ecosystem Overview</h3>
             <p>
                 The Verifiable Credential specifications rely on an ecosystem consisting of entities playing different "roles". The main
@@ -469,14 +476,11 @@
         </section>
 
         <section id="s_vcdm">
-            <!--MARK: VCDM Model -->
             <h2>Verifiable Credentials Data Model</h2>
 
             <section>
-                <!--MARK: Basic Structure -->
                 <h3>Basic Concepts</h3>
                 <section>
-                    <!--MARK: Claims, Properties -->
                     <h4>Claims, Properties</h4>
                     <p>
                         A core concept is "claims": statements made about various entities, referred to as "subjects". Subjects may be a
@@ -512,7 +516,6 @@
                 </section>
 
                 <section>
-                    <!--MARK: Verifiable Credentials -->
                     <h4>Verifiable Credentials</h4>
 
                     <p>
@@ -579,8 +582,8 @@
                 <h3>Serialization in JSON</h3>
 
                 <p>
-                    In the [[vc-data-model]] specification, as in the other documents, Verifiable Credentials and Presentations are
-                    mostly expressed in JSON [[rfc7519]], more specifically [[json-ld11]]. In this serialization, properties of claims are
+                    In the [[vc-data-model]] specification, as in the other documents, Verifiable Credentials and Presentations are mostly
+                    expressed in JSON [[rfc7519]], more specifically [[json-ld11]]. In this serialization, properties of claims are
                     represented as JSON names, and values as JSON literals or objects. Subjects of claims are either explicitly identified
                     by an `id` property, or implicitly by appearing as an object of another claim.
                 </p>
@@ -803,11 +806,145 @@
         </section>
 
         <section>
-            <!--MARK: Securing Credentials -->
+            <h2>Extra information</h2>
+
+            <section>
+                <h3>Confidence methods</h3>
+
+                <p>
+                    The [[[vc-confidence-method]]] [[vc-confidence-method]] specification defines an extensible mechanism that issuers can
+                    use to increase the confidence of verifiers in the legitimacy of the presentation of a given credential. An analogy is
+                    the check of a driving license: when the police officer (the “verifier”) gets hold of the license, he/she would first
+                    compare the photograph on the physical license to compare it with the face of the driver. This raises the confidence of
+                    the police officer that the driver is really the “subject” of the license (the “credential”).
+                </p>
+
+                <p>
+                    The specification extends the core Data Model by adding the concept of a Confidence Method. This defines mechanisms the
+                    verifier can use to increase the confidence that a subject of the VC is also the subject of another interaction. For
+                    example, the issuer might provide a verification method, such as a public key, by which the verifier could apply a
+                    proof-of-use protocol to establish that a current user has the ability to sign cryptographic challenges using the same
+                    cryptographic secrets believed by the issuer to be under the control of the subject. More complex verification method
+                    might include biometric approaches, like embedding raw biometric data (photograph, audio recordings, fingerprint data),
+                    or biometric <em>vectors</em>, i.e., compact mathematical representations produced by a specific model that can be used
+                    for matching. Some of these methods are defined in the specification, and specific communities may extend the model with
+                    other, proprietary approaches.
+                </p>
+
+                <p class="note">The list of methods in the specification is not yet finalized.</p>
+
+                <pre class="example nohighlight" title="A Simple Credential with a confidence method relying on a public EdDSA key">
+                    {
+                      "@context": [
+                        "https://www.w3.org/ns/credentials/v2",
+                        "https://www.w3.org/ns/credentials/examples/v2"
+                      ],
+                      "id": "https://university.example/Credential123",
+                      "type": ["VerifiableCredential", "ExampleAlumniCredential"],
+                      "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+                      "validFrom": "2010-01-01T00:00:00Z",
+                      "credentialSubject": {
+                        "id": "https://www.example.org/persons/pat",
+                        "name": "Pat",
+                        "alumniOf": {
+                          "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
+                          "name": "Example University"
+                        },
+                        <span class="highlight">"confidenceMethod": {
+                          "type": "Multikey",
+                          "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
+                        }</span>
+                      },
+                      "credentialSchema": {
+                        "id": "https://university.example/Credential-schema-credential",
+                        "type": "JsonSchemaCredential"
+                      }
+                    }
+                  </pre>
+            </section>
+            <section>
+                <h2>Render methods</h2>
+
+                <p>
+                    The issuer of a credential may have specific ways to express a verifiable credential to an observer. For example, an
+                    issuer of an employee badge credential might want to include rich imagery of their corporate logo and specific placement
+                    of employee information in specific areas of the badge. The [[[vc-render-method]]] [[vc-render-method]] specification
+                    defines an extensible mechanism that issuers may use to provide these preferred mechanisms for the presentation of a
+                    credential. These presentations may use of images, simple cards in a digital wallet, braille output, or complex visual
+                    presentations.
+                </p>
+
+                <p>
+                    The specification defines the extension points in the Data Model for the issuer to use. communities may define their own
+                    render methods. The document also includes some general render methods that can be used. These include:
+                </p>
+
+                <ul>
+                    <li>
+                        JSON cards: a mechanism whereby a credential is transformed into a standardized JSON format that wallets can render
+                        using their own UI designs. The JSON card format allows for the display of only a selection of the credential's
+                        statements.
+                    </li>
+                    <li>
+                        A generic, HTML+JavaScript render suite, that performs the final rendering of the credential via a sandboxed HTML
+                        iframe. The HTML snippet provided by the issuer. This approach is well adapted to Web browsers, but also to mobile
+                        applications using <a href="https://en.wikipedia.org/wiki/WebView">WebView</a>, and makes use of the rich
+                        possibilities offered by Web APIs.
+                    </li>
+                </ul>
+
+                <aside class="note">
+                    Other standard render methods might come to the fore
+                </aside>
+
+                <p><a href="#base_example_html_render"></a> adds an HTML-based render method to our standard example. Note the usage of
+                the <code>digestMultibase</code> property which adds an extra security to the choice of the HTML snippet.</p>
+
+
+                <pre id="base_example_html_render" class="example nohighlight" title="A Simple Credential with an HTML-based render method.">
+                    {
+                      "@context": [
+                        "https://www.w3.org/ns/credentials/v2",
+                        "https://www.w3.org/ns/credentials/examples/v2"
+                      ],
+                      "id": "https://university.example/Credential123",
+                      "type": ["VerifiableCredential", "ExampleAlumniCredential"],
+                      "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+                      "validFrom": "2010-01-01T00:00:00Z",
+                      <span class="highlight">"renderMethod": {
+                        "type": "TemplateRendererMethod",
+                        "renderSuite": "html",
+                        "template": {
+                          "id": "https://university.example/render-methods/alumnicredential.html",
+                          "mediaType": "text/html",
+                          "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
+                        }
+                      },</span>
+                      "credentialSubject": {
+                        "id": "https://www.example.org/persons/pat",
+                        "name": "Pat",
+                        "alumniOf": {
+                          "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
+                          "name": "Example University"
+                        },
+                        "confidenceMethod": {
+                          "type": "Multikey",
+                          "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
+                        }
+                      },
+                      "credentialSchema": {
+                        "id": "https://university.example/Credential-schema-credential",
+                        "type": "JsonSchemaCredential"
+                      }
+                    }
+                  </pre>
+            </section>
+        </section>
+
+        <section>
             <h2>Securing Credentials</h2>
 
             <section>
-                <!--MARK: Enveloping Proofs -->
                 <h3>Enveloping Proofs</h3>
 
                 <p>
@@ -823,7 +960,7 @@
                 <p>
                     In the case of JOSE, the Credential is the "payload" (to use the IETF terminology). This is preceded by a suitable
                     header whose details are specified by the relevant
-                    <a data-cite="VC-JOSE-COSE#with-jose">section</a> of the [[vc-jose-cose]] specification. These are encoded,
+                    <a data-cite="vc-jose-cose#with-jose">section</a> of the [[vc-jose-cose]] specification. These are encoded,
                     concatenated, and signed, to be transferred in a compact form by one entity to another (e.g., sent by the holder to the
                     verifier). All the intricate details on signatures, encryption keys, etc., are defined by the IETF specifications; see
                     <a href="#base_example_jwt_unencoded"></a> for a specific case.
@@ -845,7 +982,6 @@
                 </p>
 
                 <section>
-                    <!--MARK: Core Example with JOSE -->
                     <h4>Example: the Core Example Secured with JOSE and COSE</h4>
 
                     <p>
@@ -870,12 +1006,25 @@
               "type": ["VerifiableCredential", "ExampleAlumniCredential"],
               "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
               "validFrom": "2010-01-01T00:00:00Z",
+              "renderMethod": {
+                "type": "TemplateRendererMethod",
+                "renderSuite": "html",
+                "template": {
+                  "id": "https://university.example/render-methods/alumnicredential.html",
+                  "mediaType": "text/html",
+                  "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
+                }
+              },
               "credentialSubject": {
                 "id": "https://www.example.org/persons/pat",
                 "name": "Pat",
                 "alumniOf": {
                   "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
                   "name": "Example University"
+                },
+                "confidenceMethod": {
+                  "type": "Multikey",
+                  "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
                 }
               },
               "credentialSchema": {
@@ -968,12 +1117,25 @@
               "type": ["VerifiableCredential", "ExampleAlumniCredential"],
               "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
               "validFrom": "2010-01-01T00:00:00Z",
+              "renderMethod": {
+                "type": "TemplateRendererMethod",
+                "renderSuite": "html",
+                "template": {
+                  "id": "https://university.example/render-methods/alumnicredential.html",
+                  "mediaType": "text/html",
+                  "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
+                }
+              },
               "credentialSubject": {
                 "id": "https://www.example.org/persons/pat",
                 "name": "Pat",
                 "alumniOf": {
                   "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
                   "name": "Example University"
+                },
+                "confidenceMethod": {
+                  "type": "Multikey",
+                  "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
                 }
               },
               "credentialSchema": {
@@ -1205,7 +1367,7 @@
 
                     <aside class="issue">Are all the algorithm names correct in the table?</aside>
 
-                    <section>
+                    <section id="s_qr">
                         <h4>Quantum resitance</h4>
 
                         <p>
@@ -1224,25 +1386,6 @@
                             algorithms known today. Note, however, that the final list of quantum resistant cryptosuiets may still change,
                             depending on the stability and acceptance of the underlying cryptographic algorithms.
                         </p>
-
-                        <section>
-                            <h5>Forgery defense</h5>
-                            <p>
-                                The publication of the [[[vc-forgery-defense]]] [[vc-forgery-defense]] is complementary to quantum-resistant
-                                cryptosuites work and is motivated by the same threat. Those cryptosuites let issuers secure new proofs with
-                                post-quantum signatures; this specification lets an issuer establish post-quantum-backed authenticity for
-                                credentials that were, or will be, signed with conventional quantum-vulnerable algorithms without re-issuing
-                                them. This is achieved by publishing a <em>witness list</em> that is itself signed with a quantum-resistant
-                                scheme. The two mechanisms are intended to be used together.
-                            </p>
-                            <p>
-                                This specification describes a mechanism for issuers of verifiable credentials to publish indexed lists of
-                                compact cryptographic witnesses. Verifiers can use these lists to confirm that a verifiable credential was
-                                genuinely issued by the claimed issuer—as distinct from a credential forged by an attacker who has
-                                compromised the issuer's signing key. Because the witness list is itself a verifiable credential, it can be
-                                signed with a different algorithm from the protected credentials, including post-quantum signature schemes.
-                            </p>
-                        </section>
                     </section>
 
                     <section>
@@ -1325,7 +1468,6 @@
                 </section>
 
                 <section>
-                    <!--MARK: Core example with ECDSA -->
                     <h4>Example: the Core Example Secured with EdDSA and ECDSA</h4>
 
                     <p>
@@ -1350,12 +1492,25 @@
               "type": ["VerifiableCredential", "ExampleAlumniCredential"],
               "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
               "validFrom": "2010-01-01T00:00:00Z",
+              "renderMethod": {
+                "type": "TemplateRendererMethod",
+                "renderSuite": "html",
+                "template": {
+                  "id": "https://university.example/render-methods/alumnicredential.html",
+                  "mediaType": "text/html",
+                  "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
+                }
+              },
               "credentialSubject": {
                 "id": "https://www.example.org/persons/pat",
                 "name": "Pat",
                 "alumniOf": {
                   "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
                   "name": "Example University"
+                },
+                "confidenceMethod": {
+                  "type": "Multikey",
+                  "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
                 }
               },
               "credentialSchema": {
@@ -1384,7 +1539,6 @@
             }
           </pre
                     >
-
                     <p>
                         Note that the value of the `verificationMethod` property may have been the public key itself, instead of a reference
                         to a separate resource containing the key.
@@ -1393,52 +1547,60 @@
             </section>
         </section>
 
-        <section id="s_bsl">
-            <!--MARK: Bitstrings -->
-            <h2>Bitstring Status List</h2>
-            <p>
-                It is often useful for an issuer of Verifiable Credentials to link to a location where a verifier can check whether a
-                credential has been suspended or revoked. This additional resource is referred to as a "status list".
-            </p>
-            <p>
-                The simplest approach for a status list, where there is a one-to-one mapping between a Verifiable Credential and a URL where
-                the status is published, raises privacy as well as performance issues. In order to meet privacy expectations, it is useful
-                to bundle the status of large sets of credentials into a single list to help with group privacy. However, doing so can place
-                an impossible burden on both the server and client if the status information is as much as a few hundred bytes in size per
-                credential across a population of hundreds of millions of holders. The
-                [[[vc-bitstring-status-list]]] [[vc-bitstring-status-list]] specification defines a highly compressible, highly
-                space-efficient bitstring-based status list mechanism.
-            </p>
+        <section>
+            <h2>The Ecosystem</h2>
 
-            <p>
-                Conceptually, a bitstring status list is a sequence of bits. When a single bit specifies a status, such as "revoked" or
-                "suspended", then that status is expected to be true when the bit is set and false when unset. One of the benefits of using
-                a bitstring is that it is a highly compressible data format since, in the average case, large numbers of credentials will
-                remain unrevoked. If compressed using run-length compression techniques such as GZIP [[rfc1952]] the result is a
-                significantly smaller set of data: the default status list size is 131,072 entries, equivalent to 16 KB of single bit values
-                and, when only a handful of verifiable credentials are revoked, GZIP compresses the bitstring down to a few hundred bytes.
-            </p>
+            <section id="s_bsl">
+                <!--MARK: Bitstrings -->
+                <h2>Bitstring Status List</h2>
+                <p>
+                    It is often useful for an issuer of Verifiable Credentials to link to a location where a verifier can check whether a
+                    credential has been suspended or revoked. This additional resource is referred to as a "status list".
+                </p>
+                <p>
+                    The simplest approach for a status list, where there is a one-to-one mapping between a Verifiable Credential and a URL
+                    where the status is published, raises privacy as well as performance issues. In order to meet privacy expectations, it
+                    is useful to bundle the status of large sets of credentials into a single list to help with group privacy. However,
+                    doing so can place an impossible burden on both the server and client if the status information is as much as a few
+                    hundred bytes in size per credential across a population of hundreds of millions of holders. The
+                    [[[vc-bitstring-status-list]]] [[vc-bitstring-status-list]] specification defines a highly compressible, highly
+                    space-efficient bitstring-based status list mechanism.
+                </p>
 
-            <figure id="bitstring-statuslist-concept">
-                <img
-                    style="margin: auto; display: block; width: 65%"
-                    src="diagrams/BitstringStatusListConcept.svg"
-                    alt="This diagram shows a horizontal series of adjacent boxes: on the left, there are 14 boxes, and on the right, 3 boxes, with these two groups connected by four dot characters. The groups of boxes are annotated on the right by the text '16KB'. All boxes are filled with one color (green), except for those in the 5th and 10th positions, that are filled with a different color (red). These two red boxes are labeled as 'Revoked Credentials'. All of these elements are annotated, beneath, by the remark 'ZLIB Compression' and '135 bytes', with a small icon representing computer data."
-                />
-                <figcaption style="text-align: center">A visual depiction of the concepts outlined in this section.</figcaption>
-            </figure>
+                <p>
+                    Conceptually, a bitstring status list is a sequence of bits. When a single bit specifies a status, such as "revoked" or
+                    "suspended", then that status is expected to be true when the bit is set and false when unset. One of the benefits of
+                    using a bitstring is that it is a highly compressible data format since, in the average case, large numbers of
+                    credentials will remain unrevoked. If compressed using run-length compression techniques such as GZIP [[rfc1952]] the
+                    result is a significantly smaller set of data: the default status list size is 131,072 entries, equivalent to 16 KB of
+                    single bit values and, when only a handful of verifiable credentials are revoked, GZIP compresses the bitstring down to
+                    a few hundred bytes.
+                </p>
 
-            <p>
-                The specification introduces the `credentialStatus` property, as well as some additional sub-properties, that should be used
-                to add this additional information to a Verifiable Credential.
-            </p>
-            <p>
-                <a href="#base_example_status_list"></a> shows the example from <a href="#base_example_secured_di"></a>, combined with the
-                information on the credential status: the purpose of that status information, the reference to the bitstring, and the index
-                into this bitstring for the enclosing credential:
-            </p>
+                <figure id="bitstring-statuslist-concept">
+                    <img
+                        style="margin: auto; display: block; width: 65%"
+                        src="diagrams/BitstringStatusListConcept.svg"
+                        alt="This diagram shows a horizontal series of adjacent boxes: on the left, there are 14 boxes, and on the right, 3 boxes, with these two groups connected by four dot characters. The groups of boxes are annotated on the right by the text '16KB'. All boxes are filled with one color (green), except for those in the 5th and 10th positions, that are filled with a different color (red). These two red boxes are labeled as 'Revoked Credentials'. All of these elements are annotated, beneath, by the remark 'ZLIB Compression' and '135 bytes', with a small icon representing computer data."
+                    />
+                    <figcaption style="text-align: center">A visual depiction of the concepts outlined in this section.</figcaption>
+                </figure>
 
-            <pre id="base_example_status_list" class="example nohighlight" title="Verifiable Credential with a Reference to a Status List">
+                <p>
+                    The specification introduces the `credentialStatus` property, as well as some additional sub-properties, that should be
+                    used to add this additional information to a Verifiable Credential.
+                </p>
+                <p>
+                    <a href="#base_example_status_list"></a> shows the example from <a href="#base_example_secured_di"></a>, combined with
+                    the information on the credential status: the purpose of that status information, the reference to the bitstring, and
+                    the index into this bitstring for the enclosing credential:
+                </p>
+
+                <pre
+                    id="base_example_status_list"
+                    class="example nohighlight"
+                    title="Verifiable Credential with a Reference to a Status List"
+                >
         {
           "@context": [
             "https://www.w3.org/ns/credentials/v2",
@@ -1448,12 +1610,25 @@
           "type": ["VerifiableCredential", "ExampleAlumniCredential"],
           "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
           "validFrom": "2010-01-01T00:00:00Z",
+          "renderMethod": {
+            "type": "TemplateRendererMethod",
+            "renderSuite": "html",
+            "template": {
+              "id": "https://university.example/render-methods/alumnicredential.html",
+              "mediaType": "text/html",
+              "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
+            }
+          },
           "credentialSubject": {
             "id": "https://www.example.org/persons/pat",
             "name": "Pat",
             "alumniOf": {
               "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
               "name": "Example University"
+            },
+            "confidenceMethod": {
+              "type": "Multikey",
+              "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
             }
           },
           "credentialSchema": {
@@ -1470,12 +1645,12 @@
         }
       </pre>
 
-            <p>
-                The `statusListCredential` property, when dereferenced, should return a <em>separate</em> Credential for the status list.
-                The status list itself is the subject of that Credential (which, of course, can also be signed). An example is:
-            </p>
+                <p>
+                    The `statusListCredential` property, when dereferenced, should return a <em>separate</em> Credential for the status
+                    list. The status list itself is the subject of that Credential (which, of course, can also be signed). An example is:
+                </p>
 
-            <pre id="status_list_credential_example" class="example nohighlight" title="A Credential for a Bitstring Status List">
+                <pre id="status_list_credential_example" class="example nohighlight" title="A Credential for a Bitstring Status List">
         {
           "@context": [
             "https://www.w3.org/ns/credentials/v2"
@@ -1493,10 +1668,38 @@
         }
       </pre>
 
-            <p>
-                The core property in this case is `encodedList`, which is a base64url encoded version of the GZIP compressed bitstring
-                status list.
-            </p>
+                <p>
+                    The core property in this case is `encodedList`, which is a base64url encoded version of the GZIP compressed bitstring
+                    status list.
+                </p>
+            </section>
+
+            <section id="s_fd">
+                <h5>Forgery defense</h5>
+                <p>
+                    The publication of the [[[vc-forgery-defense]]] [[vc-forgery-defense]] is complementary to quantum-resistant
+                    cryptosuites and is motivated by the same threat. While cryptosuites let issuers secure new proofs with post-quantum
+                    signatures, this specification lets an issuer establish post-quantum-backed authenticity for credentials that may have
+                    been signed with conventional quantum-vulnerable algorithms. This is achieved by publishing a <em>witness list</em> that
+                    is itself the subject of a separate Verifiable Credential (that can be signed with a quantum-resistant scheme). A
+                    “witness” in that list is, essentially, the most significant bits of a hash value generated from the credential itself
+                    combined with a random seed.
+                </p>
+
+                <p>
+                    For older credentials, the verifier may locate the witness list in some out-of-band manner; e.g., a university may
+                    publish the location for all the credentials it has issued. New Verifiable Credentials may include information about the
+                    relevant witness list much like <a href="#s_bsl">status lists</a> references.
+                </p>
+            </section>
+
+            <section>
+                <h2>Recognized Entities</h2>
+            </section>
+
+            <section>
+                <h2>VCALM</h2>
+            </section>
         </section>
 
         <section>
@@ -1525,14 +1728,19 @@
                     </dt>
                     <dd>This document provides implementation guidance for Verifiable Credentials.</dd>
 
-                    <dt>
+                    <!-- <dt>
                         <a href="https://www.w3.org/TR/vc-extensions/">Verifiable Credential Extensions</a>
                     </dt>
                     <dd>
                         This document serves as an unofficial list of all known Verifiable Credential specifications whether they are
                         released by a global standards setting organization, a community group, an open source project, or an individual.
-                    </dd>
+                    </dd> -->
                 </dl>
+                <aside class="issue">
+                    Version 1.0 included a reference to <a href="https://www.w3.org/TR/vc-extensions/">Verifiable Credential Extensions</a>.
+                    Some of those entries have been incorporated into the spec (e.g., Multi*) and the document does not seem to be actively
+                    maintained.
+                </aside>
             </section>
 
             <section>
@@ -1602,31 +1810,47 @@
               "type": ["VerifiableCredential", "ExampleAlumniCredential"],
               "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
               "validFrom": "2010-01-01T00:00:00Z",
+              "renderMethod": {
+                "type": "TemplateRendererMethod",
+                "renderSuite": "html",
+                "template": {
+                  "id": "https://university.example/render-methods/alumnicredential.html",
+                  "mediaType": "text/html",
+                  "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
+                }
+              },
               "credentialSubject": {
                 "id": "https://www.example.org/persons/pat",
                 "name": "Pat",
                 "alumniOf": {
                   "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
                   "name": "Example University"
+                },
+                "confidenceMethod": {
+                  "type": "Multikey",
+                  "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
                 }
               },
-              <span class="highlight">"credentialSchema": {
+              "credentialSchema": {
                 "id": "https://university.example/Credential123-schema-credential",
                 "type": "JsonSchemaCredential"
-              },</span>
-              <span class="highlight2">"credentialStatus": {
+              },
+              "credentialStatus": {
                 "id": "https://university.example/statuslist#123456",
                 "type": "BitstringStatusListEntry",
                 "statusPurpose": "revocation",
                 "statusListIndex": "123456",
                 "statusListCredential": "https://university.example/CredentialStatusList"
-              }</span>
+              }
             }
       </pre>
         </section>
 
-        <section class="appendix">
-            <!--MARK: Lifecycle Details -->
+        <aside class="issue">
+            Version 1.0 of the overview included an appendix for a lifecycle details, originally from the UCR document. I think the section
+            (and the specification on VCALM) has made it obsolete.
+        </aside>
+        <!-- <section class="appendix">
             <h3>Lifecycle Details</h3>
 
             <p>
@@ -1718,6 +1942,6 @@
                 <li>Whether the original holder passed a Verifiable Credential to a subsequent holder.</li>
                 <li>Any restrictions using the Verifiable Credentials by the holder or verifier.</li>
             </ul>
-        </section>
+        </section> -->
     </body>
 </html>
