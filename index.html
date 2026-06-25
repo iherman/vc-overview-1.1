@@ -382,6 +382,15 @@
                 (normative) dependencies. For more details, see the subsequent sections in this document.
             </p>
 
+            <figure id="overall">
+                <img
+                    style="margin: auto; display: block; width: 100%"
+                    src="diagrams/VCWG_specifications.svg"
+                    alt="Diagram illustrating the structure of the Verifiable Credential (VC) specifications, using boxes labeled with references to the specification. Arrows on the diagram connect some of the boxes to represent (normative) dependencies. The box labeled as the VC Data Model is at the top-center of the diagram. Additional component boxes — such as Render Methods for specify preferred ways tp express a VC to the end user; VC Barcodes to express a VC in the form of a barcode; JSON Schema for structural checking; VC Recognized entities for secure the issuer are part of a specific ecosystem; VCALM for APIs for VC Lifecycle Management; Confidence Methods to specify ways to increase confidence for a verifier in a VC; Bitstring Status List for publishing status information; VC FOrgery Defense to publish an indexed list of compact fingerprints; and Controlled Identifiers for verification methods and relationships — are related to the VC Data Model. The box for securing mechanisms contain separate boxes for embedded proofs, on the left, and enveloping proofs, on the right. The box for embedded proofs contains a box labeled as Data Integrity, which depends both on the VC Data Model and on Controlled Identifiers, as well as boxes for the ECDSA, EdDSA, BBS, and Quantum Resistant Cryptosuites, supporting different elliptic curves and signature schemes; all of these depend on Data Integrity. The enveloping proofs box contains a single box labeled as 'JOSE and COSE ... using JWS, SD-JWT, or CBOR'; as with Data Integrity, this depends both on the VC Data Model and on Controlled Identifiers."
+                />
+                <figcaption style="text-align: center">Verifiable Credentials Working Group Recommendations (the figure is also <a href="diagrams/VCWG_specifications.svg">available in SVG</a>).</figcaption>
+            </figure>
+
             <p>
                 The [[[vc-data-model]]] [[vc-data-model]] specification, which defines the core concepts that all other specifications
                 depend on, plays a central role. The model is defined in abstract terms, and applications express their specific credentials
@@ -445,14 +454,6 @@
                 specifications, but also other Recommendations such as [[[did-core]]] [[did-core]].
             </p>
 
-            <figure id="overall">
-                <img
-                    style="margin: auto; display: block; width: 100%"
-                    src="diagrams/VCWG_specifications.svg"
-                    alt="Diagram illustrating the structure of the Verifiable Credential (VC) specifications, using boxes labeled with references to the specification. Arrows on the diagram connect some of the boxes to represent (normative) dependencies. The box labeled as the VC Data Model is at the top-center of the diagram. Additional component boxes — such as Render Methods for specify preferred ways tp express a VC to the end user; VC Barcodes to express a VC in the form of a barcode; JSON Schema for structural checking; VC Recognized entities for secure the issuer are part of a specific ecosystem; VCALM for APIs for VC Lifecycle Management; Confidence Methods to specify ways to increase confidence for a verifier in a VC; Bitstring Status List for publishing status information; VC FOrgery Defense to publish an indexed list of compact fingerprints; and Controlled Identifiers for verification methods and relationships — are related to the VC Data Model. The box for securing mechanisms contain separate boxes for embedded proofs, on the left, and enveloping proofs, on the right. The box for embedded proofs contains a box labeled as Data Integrity, which depends both on the VC Data Model and on Controlled Identifiers, as well as boxes for the ECDSA, EdDSA, BBS, and Quantum Resistant Cryptosuites, supporting different elliptic curves and signature schemes; all of these depend on Data Integrity. The enveloping proofs box contains a single box labeled as 'JOSE and COSE ... using JWS, SD-JWT, or CBOR'; as with Data Integrity, this depends both on the VC Data Model and on Controlled Identifiers."
-                />
-                <figcaption style="text-align: center">Verifiable Credentials Working Group Recommendations</figcaption>
-            </figure>
 
             <div class="note">
                 <p>

@@ -1,24 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background:#fff;background-color:#fff;color-scheme:light" viewBox="0 0 1151 1137">
-    <rect width="100%" height="100%" fill="#fff" style="fill:#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background:#fff;background-color:light-dark(#fff,var(--ge-dark-color, #121212));color-scheme:light dark" viewBox="0 0 1157 1137">
+    <rect width="100%" height="100%" fill="#fff" style="fill:light-dark(#fff,var(--ge-dark-color, #121212))"/>
     <g data-cell-id="0">
         <g data-cell-id="1">
-            <rect width="720" height="480" x="200" y="636" fill="none" stroke="#000" stroke-dasharray="3 3" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-44" pointer-events="all" rx="72" ry="72" style="stroke:#000" transform="translate(.5 .5)"/>
+            <rect width="330" height="594" x="20" y="20" fill="none" stroke="#000" stroke-dasharray="3 3" data-cell-id="N7mbl7mFPHtfplwaVIX_-8" pointer-events="all" rx="49.5" ry="49.5" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+            <rect width="330" height="594" x="806" y="20" fill="none" stroke="#000" stroke-dasharray="3 3" data-cell-id="N7mbl7mFPHtfplwaVIX_-6" pointer-events="all" rx="49.5" ry="49.5" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+            <rect width="720" height="480" x="206" y="636" fill="none" stroke="#000" stroke-dasharray="3 3" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-44" pointer-events="all" rx="72" ry="72" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-20">
-                <path fill="none" d="M391.74 676V380q0-10 10-10h89.02q10 0 10-9.07v-9.06" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m500.76 345.12 4.5 9-4.5-2.25-4.5 2.25Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M408.74 676V380q0-10 10-10h78.02q10 0 10-9.07v-9.06" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m506.76 345.12 4.5 9-4.5-2.25-4.5 2.25Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-21">
-                <path fill="none" d="M738.99 676V380q0-10-10-10h-78.23q-10 0-10-9.07v-9.06" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m640.76 345.12 4.5 9-4.5-2.25-4.5 2.25Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M744.99 676V380q0-10-10-10h-78.23q-10 0-10-9.07v-9.06" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m646.76 345.12 4.5 9-4.5-2.25-4.5 2.25Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
-            <rect width="310" height="420" x="580.25" y="656" fill="none" stroke="#000" stroke-dasharray="3 3" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-34" pointer-events="all" rx="46.5" ry="46.5" style="stroke:#000" transform="translate(.5 .5)"/>
+            <rect width="310" height="420" x="586.25" y="656" fill="none" stroke="#000" stroke-dasharray="3 3" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-34" pointer-events="all" rx="46.5" ry="46.5" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             <a xlink:href="https://www.w3.org/TR/vc-jose-cose/" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-6" target="_blank">
-                <rect width="237.5" height="50" x="620.24" y="676" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="237.5" height="50" x="626.24" y="676" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:236px;height:1px;padding-top:701px;margin-left:621px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:236px;height:1px;padding-top:701px;margin-left:627px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span>
                                         <span style="font-size:20px">
                                             JOSE and COSE
@@ -35,17 +37,17 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="739" y="706" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">JOSE and COSE...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="745" y="706" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">JOSE and COSE...</text>
                 </switch>
             </a>
-            <rect width="310" height="420" x="230.25" y="656" fill="none" stroke="#000" stroke-dasharray="3 3" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-33" pointer-events="all" rx="46.5" ry="46.5" style="stroke:#000" transform="translate(.5 .5)"/>
+            <rect width="310" height="420" x="236.25" y="656" fill="none" stroke="#000" stroke-dasharray="3 3" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-33" pointer-events="all" rx="46.5" ry="46.5" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             <a xlink:href="https://www.w3.org/TR/vc-di-eddsa/" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-3" target="_blank">
-                <rect width="215" height="50" x="310.24" y="753" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="215" height="50" x="316.24" y="753" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:213px;height:1px;padding-top:778px;margin-left:311px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:213px;height:1px;padding-top:778px;margin-left:317px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span style="font-size:20px">
                                         Ed
                                     </span>
@@ -63,16 +65,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="418" y="783" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">EdDSA Cryptosuites...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="424" y="783" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">EdDSA Cryptosuites...</text>
                 </switch>
             </a>
             <a xlink:href="https://www.w3.org/TR/vc-di-ecdsa/" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-4" target="_blank">
-                <rect width="215" height="50" x="310.24" y="827" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="215" height="50" x="316.24" y="827" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:213px;height:1px;padding-top:852px;margin-left:311px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:213px;height:1px;padding-top:852px;margin-left:317px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span style="font-size:20px">
                                         ECDSA Cryptosuites
                                     </span>
@@ -86,16 +88,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="418" y="857" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">ECDSA Cryptosuites...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="424" y="857" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">ECDSA Cryptosuites...</text>
                 </switch>
             </a>
             <a xlink:href="https://www.w3.org/TR/vc-di-bbs/" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-5" target="_blank">
-                <rect width="215" height="50" x="310.24" y="902" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="215" height="50" x="316.24" y="902" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:213px;height:1px;padding-top:927px;margin-left:311px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:213px;height:1px;padding-top:927px;margin-left:317px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span style="font-size:20px">
                                         BBS Cryptosuites
                                     </span>
@@ -109,16 +111,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="418" y="932" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">BBS Cryptosuites...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="424" y="932" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">BBS Cryptosuites...</text>
                 </switch>
             </a>
             <a xlink:href="https://www.w3.org/TR/vc-data-integrity/" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-2" target="_blank">
-                <rect width="215" height="50" x="284.24" y="676" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="237" height="50" x="290.24" y="676" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:213px;height:1px;padding-top:701px;margin-left:285px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:235px;height:1px;padding-top:701px;margin-left:291px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span style="font-size:20px">
                                         Data Integrity
                                     </span>
@@ -132,32 +134,32 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="392" y="706" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Data Integrity...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="409" y="706" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Data Integrity...</text>
                 </switch>
             </a>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-37">
-                <path fill="none" d="M310.24 778h-40q-10 0-10-10v-57q0-10 8.07-10h8.07" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m283.13 701-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M316.24 778h-40q-10 0-10-10v-57q0-10 8.07-10h8.07" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m289.13 701-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-38">
-                <path fill="none" d="M310.24 852h-40q-10 0-10-10V711q0-10 8.07-10h8.07" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m283.13 701-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M316.24 852h-40q-10 0-10-10V711q0-10 8.07-10h8.07" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m289.13 701-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-39">
-                <path fill="none" d="M310.24 927h-40q-10 0-10-10V711q0-10 8.07-10h8.07" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m283.13 701-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M316.24 927h-40q-10 0-10-10V711q0-10 8.07-10h8.07" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m289.13 701-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="Xbw9OttzSYU2m0TrLEde-5">
-                <path fill="none" d="m570.98 432.13-.22-88.13" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m571 438.88-4.53-8.99 4.51 2.24 4.49-2.26Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="m576.98 432.13-.22-88.13" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m577 438.88-4.53-8.99 4.51 2.24 4.49-2.26Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <a xlink:href="https://www.w3.org/TR/cid-1.0/" data-cell-id="Xbw9OttzSYU2m0TrLEde-2" target="_blank">
-                <rect width="290" height="70" x="426" y="440" fill="none" stroke="#000" pointer-events="all" rx="10.5" ry="10.5" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="290" height="70" x="432" y="440" fill="none" stroke="#000" pointer-events="all" rx="10.5" ry="10.5" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:288px;height:1px;padding-top:475px;margin-left:427px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:288px;height:1px;padding-top:475px;margin-left:433px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span>
                                         <span style="font-size:20px">
                                             Controlled Identifiers
@@ -175,16 +177,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="571" y="480" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Controlled Identifiers...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="577" y="480" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Controlled Identifiers...</text>
                 </switch>
             </a>
             <a xlink:href="https://www.w3.org/TR/vc-data-model/" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-1" target="_blank">
-                <rect width="280" height="80" x="430.76" y="264" fill="none" stroke="#000" stroke-width="3" pointer-events="all" rx="12" ry="12" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="280" height="80" x="436.76" y="264" fill="none" stroke="#000" stroke-width="3" pointer-events="all" rx="12" ry="12" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:304px;margin-left:432px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:304px;margin-left:438px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span style="font-size:20px">
                                         Data Model
                                     </span>
@@ -198,16 +200,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="571" y="309" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Data Model...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="577" y="309" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Data Model...</text>
                 </switch>
             </a>
             <a xlink:href="https://www.w3.org/TR/vc-json-schema/" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-7" target="_blank">
-                <rect width="280" height="60" x="41.01" y="124" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="280" height="60" x="41.01" y="124" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
                         <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:154px;margin-left:42px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span>
                                         <span style="font-size:20px">
                                             JSON Schema
@@ -226,20 +228,20 @@
                 </switch>
             </a>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="Xbw9OttzSYU2m0TrLEde-3">
-                <path fill="none" d="M679.62 676V570q0-10-10-10H653.5q-10 0-10-10v-32.13" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m643.5 511.12 4.5 9-4.5-2.25-4.5 2.25Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M685.62 676V570q0-10-10-10H659.5q-10 0-10-10v-32.13" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m649.5 511.12 4.5 9-4.5-2.25-4.5 2.25Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="Xbw9OttzSYU2m0TrLEde-4">
-                <path fill="none" d="M445.49 676V570q0-10 10-10h33.01q10 0 10-10v-32.13" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m498.5 511.12 4.5 9-4.5-2.25-4.5 2.25Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M467.99 676V570q0-10 10-10h16.51q10 0 10-10v-32.13" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m504.5 511.12 4.5 9-4.5-2.25-4.5 2.25Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <g data-cell-id="7Y__Ef_JBj4FKFU6f0si-1">
-                <rect width="150" height="30" x="663.99" y="1046" fill="none" pointer-events="all" transform="translate(.5 .5)"/>
+                <rect width="150" height="30" x="669.99" y="1046" fill="none" pointer-events="all" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:1061px;margin-left:739px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:1061px;margin-left:745px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:nowrap">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:nowrap">
                                     <i>
                                         Enveloping Proofs
                                     </i>
@@ -247,16 +249,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="739" y="1066" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Enveloping Proofs</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="745" y="1066" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Enveloping Proofs</text>
                 </switch>
             </g>
             <g data-cell-id="7Y__Ef_JBj4FKFU6f0si-2">
-                <rect width="150" height="30" x="310.25" y="1046" fill="none" pointer-events="all" transform="translate(.5 .5)"/>
+                <rect width="150" height="30" x="316.25" y="1046" fill="none" pointer-events="all" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:1061px;margin-left:385px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:1061px;margin-left:391px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:nowrap">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:nowrap">
                                     <i>
                                         Embedded proofs
                                     </i>
@@ -264,16 +266,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="385" y="1066" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Embedded proofs</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="391" y="1066" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Embedded proofs</text>
                 </switch>
             </g>
             <g data-cell-id="7Y__Ef_JBj4FKFU6f0si-3">
-                <rect width="180" height="30" x="470" y="1086" fill="none" pointer-events="all" transform="translate(.5 .5)"/>
+                <rect width="180" height="30" x="476" y="1086" fill="none" pointer-events="all" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:1101px;margin-left:560px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:1101px;margin-left:566px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:nowrap">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:nowrap">
                                     <i>
                                         Securing mechanisms
                                     </i>
@@ -281,16 +283,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="560" y="1106" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Securing mechanisms</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="566" y="1106" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Securing mechanisms</text>
                 </switch>
             </g>
             <a xlink:href="https://www.w3.org/TR/vc-di-quantum-resistant/" data-cell-id="whtBakF46aN5u3JqghIY-1" target="_blank">
-                <rect width="215" height="50" x="310.25" y="976" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="215" height="50" x="316.25" y="976" fill="none" stroke="#000" pointer-events="all" rx="7.5" ry="7.5" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:213px;height:1px;padding-top:1001px;margin-left:311px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:213px;height:1px;padding-top:1001px;margin-left:317px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span style="font-size:20px">
                                         Quantum-Resistant Cryptosuites
                                     </span>
@@ -298,23 +300,23 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="418" y="1006" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Quantum-Resistant Cryptosui...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="424" y="1006" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Quantum-Resistant Cryptosui...</text>
                 </switch>
             </a>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="whtBakF46aN5u3JqghIY-2">
-                <path fill="none" d="M310.25 1001h-40q-10 0-10-10V711q0-10 8.06-10h8.07" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m283.13 701-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M316.25 1001h-40q-10 0-10-10V711q0-10 8.06-10h8.07" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m289.13 701-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <a xlink:href="https://www.w3.org/TR/vc-render-method/" data-cell-id="PZ3OvfCmlgFGKLccNGj_-1" target="_blank">
-                <rect width="280" height="60" x="41.01" y="424" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="280" height="60" x="41.01" y="424" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
                         <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:454px;margin-left:42px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span>
                                         <span style="font-size:20px">
-                                            Render Method
+                                            Rendering Method
                                         </span>
                                     </span>
                                     <div>
@@ -329,16 +331,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="181" y="459" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Render Method...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="181" y="459" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Rendering Method...</text>
                 </switch>
             </a>
             <a xlink:href="https://www.w3.org/TR/vc-confidence-method/" data-cell-id="PZ3OvfCmlgFGKLccNGj_-2" target="_blank">
-                <rect width="280" height="60" x="39.99" y="274" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="280" height="60" x="39.99" y="274" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
                         <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:304px;margin-left:41px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span>
                                         <span style="font-size:20px">
                                             Confidence Method
@@ -360,32 +362,32 @@
                 </switch>
             </a>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="PZ3OvfCmlgFGKLccNGj_-19">
-                <path fill="none" d="M422.89 304h-102.9" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m429.64 304-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M428.89 304h-108.9" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m435.64 304-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="Cm7iUSekO8F5OKahWOh--11">
-                <path fill="none" d="M718.62 324H760q10 0 10 10v192q0 10 10 10h44.74" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m711.87 324 9-4.5-2.25 4.5 2.25 4.5Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M724.62 324H766q10 0 10 10v192q0 10 10 10h44.74" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m717.87 324 9-4.5-2.25 4.5 2.25 4.5Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="Cm7iUSekO8F5OKahWOh--12">
-                <path fill="none" d="M422.89 284H385.9q-10 0-10-10V164q0-10-10-10h-44.89" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m429.64 284-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M428.89 284H388.9q-10 0-10-10V164q0-10-10-10h-47.89" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m435.64 284-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="Cm7iUSekO8F5OKahWOh--13">
-                <path fill="none" d="M422.89 324H385.9q-10 0-10 10v110q0 10-10 10h-44.89" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m429.64 324-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M428.89 324H388.9q-10 0-10 10v110q0 10-10 10h-47.89" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m435.64 324-9 4.5 2.25-4.5-2.25-4.5Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="N7mbl7mFPHtfplwaVIX_-1">
-                <path fill="none" d="M718.62 304h106.13" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m711.87 304 9-4.5-2.25 4.5 2.25 4.5Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M724.62 304h106.13" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m717.87 304 9-4.5-2.25 4.5 2.25 4.5Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <a xlink:href="https://www.w3.org/TR/vc-barcodes-1.0/" data-cell-id="PZ3OvfCmlgFGKLccNGj_-6" target="_blank">
-                <rect width="280" height="60" x="824.75" y="274" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="280" height="60" x="830.75" y="274" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:304px;margin-left:826px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:304px;margin-left:832px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <div>
                                         <span>
                                             <span style="font-size:20px">
@@ -405,16 +407,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="965" y="309" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Barcodes...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="971" y="309" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Barcodes...</text>
                 </switch>
             </a>
             <a xlink:href="https://www.w3.org/TR/vc-bitstring-status-list/" data-cell-id="r7VOtmBWi9sTdI5Oyx6i-8" target="_blank">
-                <rect width="280" height="60" x="824.74" y="390" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="280" height="60" x="830.74" y="390" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:420px;margin-left:826px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:420px;margin-left:832px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <span>
                                         <span style="font-size:20px">
                                             Bitstring Status List
@@ -429,16 +431,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="965" y="425" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Bitstring Status List...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="971" y="425" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Bitstring Status List...</text>
                 </switch>
             </a>
             <a xlink:href="https://www.w3.org/TR/vc-forgery-defense/" data-cell-id="PZ3OvfCmlgFGKLccNGj_-5" target="_blank">
-                <rect width="280" height="60" x="824.74" y="506" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="280" height="60" x="830.74" y="506" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:536px;margin-left:826px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:536px;margin-left:832px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <div>
                                         <span>
                                             <span style="font-size:20px">
@@ -458,16 +460,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="965" y="541" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Forgery Defense...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="971" y="541" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Forgery Defense...</text>
                 </switch>
             </a>
             <a xlink:href="https://www.w3.org/TR/vc-recognized-entities/" data-cell-id="Cm7iUSekO8F5OKahWOh--1" target="_blank">
-                <rect width="280" height="60" x="824.74" y="42" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="280" height="60" x="830.74" y="42" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:72px;margin-left:826px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:72px;margin-left:832px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <div>
                                         <span>
                                             <span style="font-size:20px">
@@ -486,16 +488,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="965" y="77" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Recognized Entities...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="971" y="77" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Recognized Entities...</text>
                 </switch>
             </a>
             <a xlink:href="https://www.w3.org/TR/vcalm/" data-cell-id="Cm7iUSekO8F5OKahWOh--2" target="_blank">
-                <rect width="280" height="60" x="824.74" y="158" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:#000" transform="translate(.5 .5)"/>
+                <rect width="280" height="60" x="830.74" y="158" fill="none" stroke="#000" pointer-events="all" rx="9" ry="9" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:188px;margin-left:826px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:278px;height:1px;padding-top:188px;margin-left:832px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:normal;word-wrap:normal">
                                     <div>
                                         <span>
                                             <span style="font-size:20px">
@@ -514,26 +516,25 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="965" y="193" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">VCALM...</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="971" y="193" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">VCALM...</text>
                 </switch>
             </a>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="N7mbl7mFPHtfplwaVIX_-3">
-                <path fill="none" d="M718.62 324H760q10 0 10 10v76q0 10 10 10h44.74" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m711.87 324 9-4.5-2.25 4.5 2.25 4.5Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M724.62 324H766q10 0 10 10v76q0 10 10 10h44.74" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m717.87 324 9-4.5-2.25 4.5 2.25 4.5Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
             <g stroke="#000" stroke-miterlimit="10" data-cell-id="N7mbl7mFPHtfplwaVIX_-4">
-                <path fill="none" d="M718.62 284H760q10 0 10-10v-76q0-10 10-10h44.74" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-                <path d="m711.87 284 9-4.5-2.25 4.5 2.25 4.5Z" pointer-events="all" style="fill:#000;stroke:#000" transform="translate(.5 .5)"/>
+                <path fill="none" d="M724.62 284H766q10 0 10-10v-76q0-10 10-10h44.74" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
+                <path d="m717.87 284 9-4.5-2.25 4.5 2.25 4.5Z" pointer-events="all" style="fill:light-dark(#000,#fff);stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             </g>
-            <path fill="none" stroke="#000" stroke-miterlimit="10" d="M710.76 284H760q10 0 10-10V82q0-10 10-10h44.74" data-cell-id="N7mbl7mFPHtfplwaVIX_-5" pointer-events="stroke" style="stroke:#000" transform="translate(.5 .5)"/>
-            <rect width="330" height="594" x="800" y="20" fill="none" stroke="#000" stroke-dasharray="3 3" data-cell-id="N7mbl7mFPHtfplwaVIX_-6" pointer-events="all" rx="49.5" ry="49.5" style="stroke:#000" transform="translate(.5 .5)"/>
+            <path fill="none" stroke="#000" stroke-miterlimit="10" d="M716.76 284H766q10 0 10-10V82q0-10 10-10h44.74" data-cell-id="N7mbl7mFPHtfplwaVIX_-5" pointer-events="stroke" style="stroke:light-dark(#000,#fff)" transform="translate(.5 .5)"/>
             <g data-cell-id="N7mbl7mFPHtfplwaVIX_-7">
-                <rect width="110" height="30" x="910" y="584" fill="none" pointer-events="all" transform="translate(.5 .5)"/>
+                <rect width="110" height="30" x="916" y="584" fill="none" pointer-events="all" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:599px;margin-left:965px">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:599px;margin-left:971px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:nowrap">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:nowrap">
                                     <i>
                                         Deployment
                                     </i>
@@ -541,17 +542,16 @@
                             </div>
                         </div>
                     </foreignObject>
-                    <text xmlns="http://www.w3.org/2000/svg" x="965" y="604" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Deployment</text>
+                    <text xmlns="http://www.w3.org/2000/svg" x="971" y="604" fill="light-dark(#000000, #ffffff)" font-family="Helvetica" font-size="16" text-anchor="middle">Deployment</text>
                 </switch>
             </g>
-            <rect width="330" height="594" x="20" y="20" fill="none" stroke="#000" stroke-dasharray="3 3" data-cell-id="N7mbl7mFPHtfplwaVIX_-8" pointer-events="all" rx="49.5" ry="49.5" style="stroke:#000" transform="translate(.5 .5)"/>
             <g data-cell-id="N7mbl7mFPHtfplwaVIX_-10">
                 <rect width="160" height="30" x="105" y="584" fill="none" pointer-events="all" transform="translate(.5 .5)"/>
                 <switch>
                     <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
                         <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:599px;margin-left:185px">
                             <div style="box-sizing:border-box;font-size:0;text-align:center;color:#000">
-                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;white-space:nowrap">
+                                <div style="display:inline-block;font-size:16px;font-family:Helvetica;color:light-dark(#000,#fff);line-height:1.2;pointer-events:all;white-space:nowrap">
                                     <i>
                                         Extensions to core
                                     </i>
