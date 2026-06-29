@@ -10,7 +10,7 @@
       out in the same tree and use relative links so that they'll work offline,
      -->
         <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
-        <script class="remove" src="https://cdn.jsdelivr.net/gh/w3c/respec-vc@3.3.6/dist/main.js"></script>
+        <script class="remove" src="https://cdn.jsdelivr.net/gh/w3c/respec-vc@3.5.1/dist/main.js"></script>
 
         <script type="text/javascript" class="remove">
             var respecConfig = {
@@ -388,7 +388,10 @@
                     src="diagrams/VCWG_specifications.svg"
                     alt="Diagram illustrating the structure of the Verifiable Credential (VC) specifications, using boxes labeled with references to the specification. Arrows on the diagram connect some of the boxes to represent (normative) dependencies. The box labeled as the VC Data Model is at the top-center of the diagram. Additional component boxes — such as Render Methods for specify preferred ways tp express a VC to the end user; VC Barcodes to express a VC in the form of a barcode; JSON Schema for structural checking; VC Recognized entities for secure the issuer are part of a specific ecosystem; VCALM for APIs for VC Lifecycle Management; Confidence Methods to specify ways to increase confidence for a verifier in a VC; Bitstring Status List for publishing status information; VC FOrgery Defense to publish an indexed list of compact fingerprints; and Controlled Identifiers for verification methods and relationships — are related to the VC Data Model. The box for securing mechanisms contain separate boxes for embedded proofs, on the left, and enveloping proofs, on the right. The box for embedded proofs contains a box labeled as Data Integrity, which depends both on the VC Data Model and on Controlled Identifiers, as well as boxes for the ECDSA, EdDSA, BBS, and Quantum Resistant Cryptosuites, supporting different elliptic curves and signature schemes; all of these depend on Data Integrity. The enveloping proofs box contains a single box labeled as 'JOSE and COSE ... using JWS, SD-JWT, or CBOR'; as with Data Integrity, this depends both on the VC Data Model and on Controlled Identifiers."
                 />
-                <figcaption style="text-align: center">Verifiable Credentials Working Group Recommendations (the figure is also <a href="diagrams/VCWG_specifications.svg">available in SVG</a>).</figcaption>
+                <figcaption style="text-align: center">
+                    Verifiable Credentials Working Group Recommendations (the figure is also
+                    <a href="diagrams/VCWG_specifications.svg">available in SVG</a>).
+                </figcaption>
             </figure>
 
             <p>
@@ -433,11 +436,17 @@
                 [[[vc-di-eddsa]]] [[vc-di-eddsa]], [[[vc-di-ecdsa]]] [[vc-di-ecdsa]], [[[vc-di-bbs]]] [[vc-di-bbs]], and
                 [[[vc-di-quantum-resistant]]] [[vc-di-quantum-resistant]]. Other cryptosuites may be specified by the community.
             </p>
+            <p>
+                The [[[cid]]] [[cid]] specification defines some common terms (e.g., verification
+                <a data-cite="cid-1.0#verification-relationships">relationships</a>
+                and
+                <a data-cite="cid-1.0#dfn-verification-method">methods</a>) that are used not only by other Verifiable Credential
+                specifications, but also other Recommendations such as [[[did-core]]] [[did-core]].
+            </p>
 
             <p>
-                The [[[vc-forgery-defense]]] [[vc-forgery-defense]] defines a mechanism for issuers of verifiable credentials to publish
-                indexed lists of compact cryptographic witnesses. This is an extra layer of security for verifiable credentials that are
-                already issued, but whose signature keys may be compromised.
+                The [[[vc-barcodes]]] [[vc-barcodes]] specification defines an efficient way to represent a Verifiable Credential in the
+                form of an optical barcode.
             </p>
 
             <p>
@@ -447,13 +456,10 @@
             </p>
 
             <p>
-                Finally, the [[[cid]]] [[cid]] specification defines some common terms (e.g., verification
-                <a data-cite="cid-1.0#verification-relationships">relationships</a>
-                and
-                <a data-cite="cid-1.0#dfn-verification-method">methods</a>) that are used not only by other Verifiable Credential
-                specifications, but also other Recommendations such as [[[did-core]]] [[did-core]].
+                The [[[vc-forgery-defense]]] [[vc-forgery-defense]] specification defines a mechanism for issuers of verifiable credentials
+                to publish indexed lists of compact cryptographic witnesses. This is an extra layer of security for verifiable credentials
+                that are already issued, but whose signature keys may be compromised.
             </p>
-
 
             <div class="note">
                 <p>
@@ -1626,7 +1632,102 @@
             <section>
                 <h2>Barcodes</h2>
 
-                <p>t.b.d.</p>
+                <p>
+                    Verifiable Credentials can be expressed through different media, like simple text, a PDF file, or an image. An important
+                    presentation format is the usage optical barcodes, like QR codes, that often appear on identicy cards or driving
+                    licenses. A simple approach is to convert the JSON serialization of the Credential into CBOR [[rfc8949]], and then
+                    generate a QR code from that CBOR representation.. This can be done by a number of off-the-shelf tools.
+                </p>
+
+                <p>
+                    However, this approach has a major drawback for even moderately sized Verifiable Credentials: the result of the direct
+                    CBOR conversion may be too big for a QR code, which has a severe size limitation. To solve this problem, the
+                    [[[vc-barcodes]]] [[vc-barcodes]] specification takes a slightly different approach. Instead of using a generic CBOR
+                    conversion, it relies on the CBOR-LD [[cbor-ld]] representation of the credential. CBOR-LD is a CBOR encoding tailored
+                    for JSON-LD: it includes the possibility of semantic compression of the data, targeted at a particular application
+                    vocabulary. It is possible to achieve compression ratios in excess of 60% better than general compression schemes, which
+                    makes it possible to represent Verifiable Credentials for, say, driving licenses or birth certificates.
+                </p>
+
+                <figure id="bcert-barcode">
+                    <img
+                        style="margin: auto; display: block; width: 50%"
+                        src="figures/bcert-barcode.png"
+                        alt="A picture of the front of a birth certificate containing information such as the newborn's name, parent's names, information about the hospital, attendees, and person responsible for the registration."
+                    />
+                    <figcaption style="text-align: center">
+                        A birth certificate with the textual and QR code representation of the same Credential; the QR also includes the
+                        Credential proof.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    Any credential can be represented in a barcode, yielding, for example, a birth cerfiticate like on
+                    <a href="#bcert-barcode"></a>. However, in practical applications, the situation may be a bit more complex. Consider the
+                    back side of the fictious employment authorization card on <a href="#ead-back"></a>:
+                </p>
+
+                <figure id="ead-back">
+                    <img
+                        style="margin: auto; display: block; width: 50%"
+                        src="figures/ead-back.png"
+                        alt="Picture of the back of a employment authorization document issued by the state of Utopia, containing usage rules as well as machine-readable zone data that encodes much of the information displayed on the front of the card."
+                    />
+                    <figcaption style="text-align: center">
+                        The back of an employment authorization document that also includes a machine-readable zone (MRZ).
+                    </figcaption>
+                </figure>
+
+                <p>
+                    It includes a machine-readable zone (MRZ) containing information designed to be read through optical character
+                    recognition. The goal is to generate a Verifiable Credential securing that MRZ data; this requires a special Credential
+                    whose subject cannot be simply expressed in JSON:
+                </p>
+
+                <pre class="example nohighlight" title="Verifiable Credential for the MRZ data">
+  {
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      "https://w3id.org/citizenship/v2",
+      "https://w3id.org/citizenship/utopia/v1"
+    ],
+    "type": [
+      "VerifiableCredential",
+      "OpticalBarcodeCredential"
+    ],
+    "issuer": "did:web:immigration.utopia.example",
+    "credentialSubject": {
+      "type": "MachineReadableZone",
+    },
+    "proof": {
+      "type": "DataIntegrity",
+      "cryptosuite": "ecdsa-xi-2023",
+      "verificationMethod": "did:web:immigration.utopia.example#key-4"
+      "proofValue": "z4peo48uwK2EF4Fta8P...HzQMDYJ34r9gL"
+    }
+  }
+            </pre
+                >
+
+                <p>The `MachineReadableZone` type means to take the data directly from the MRZ, without change.</p>
+                <p>
+                    Note the usage of the `ecdsa-xi-2023` cryptosuite (listed in <a href="#cryptosuites-table"></a>): it allows the
+                    inclusion of additional, external data to be "added" to the canonicalized JSON-LD data before signature. This is how the
+                    proof for the MRZ data is combined with that of the full Credential. The result is a QR code appearing on the front of
+                    the employment card on <a href="#ead-front"></a>:
+                </p>
+
+                <figure id="ead-front">
+                    <img
+                        style="margin: auto; display: block; width: 50%"
+                        src="figures/ead-front.png"
+                        alt="Picture of the front of an employment authorization document issued by the state of Utopia which contains a picture of the individual that is the subject of the document along with their attributes, such as name, address, height, weight, eye color, and employment privileges"
+                    />
+                    <figcaption style="text-align: center">
+                        The front of an employment authorization document that also includes a Verifiable Credential in the form of a QR
+                        code.
+                    </figcaption>
+                </figure>
             </section>
 
             <section id="s_bsl">
@@ -1876,7 +1977,7 @@
                 id="complete_example"
                 class="example nohighlight vc"
                 data-vc-vm="https://example.edu/issuers/565049#key-1"
-                data-vc-tabs="eddsa-rdfc-2022 ecdsa-rdfc-2019 bbs-2023 jose sd-jwt cose"
+                data-vc-tabs="eddsa-rdfc-2022 ecdsa-rdfc-2019 bbs-2023 jose sd-jwt cose qr"
                 title="A verifiable credential for alumni, with a reference to a render method, confidence method, credential JSON schema, and status list"
             >
             {
