@@ -1629,7 +1629,7 @@
         <section>
             <h2>Verifiable Credential Deployment</h2>
 
-            <section>
+            <section id="s_barcodes">
                 <h2>Barcodes</h2>
 
                 <p>
@@ -1815,10 +1815,9 @@
             "type": "JsonSchemaCredential"
           },
           <span class="highlight2">"credentialStatus": {
-            "id": "https://university.example/statuslist#123456",
             "type": "BitstringStatusListEntry",
             "statusPurpose": "revocation",
-            "statusListIndex": "123456",
+            "statusListIndex": "9989",
             "statusListCredential": "https://university.example/CredentialStatusList"
           }</span>
         }
@@ -1858,18 +1857,100 @@
                 <p>
                     The publication of the [[[vc-forgery-defense]]] [[vc-forgery-defense]] is complementary to quantum-resistant
                     cryptosuites and is motivated by the same threat. While cryptosuites let issuers secure new proofs with post-quantum
-                    signatures, this specification lets an issuer establish post-quantum-backed authenticity for credentials that may have
-                    been signed with conventional quantum-vulnerable algorithms. This is achieved by publishing a <em>witness list</em> that
-                    is itself the subject of a separate Verifiable Credential (that can be signed with a quantum-resistant scheme). A
-                    “witness” in that list is, essentially, the most significant bits of a hash value generated from the credential itself
-                    combined with a random seed.
+                    signatures, this specification lets an issuer establish post-quantum-backed authenticity for credentials that are signed
+                    with conventional quantum-vulnerable algorithms. That may be the case for credentials that cannot reasonably be
+                    re-issued or where the significant size of quantum-resistant signatures becomes an obstacle. (A good example may be the
+                    employment cards issued by a state or a country, as described in <a href="#s_barcodes"></a>.)
                 </p>
+                <p>
+                    The forgery defense mechanism defined by this specification is achieved by publishing a <em>witness list</em> that is
+                    itself the subject of a separate Verifiable Credential. A “witness” in that list is, essentially, the most significant
+                    bits of a hash value generated from the credential itself, combined with a random seed per credential. The list combines a
+                    large number of such witnesses in one, encoded value, and the Credential is signed by, preferably, a quantum resistant scheme:
+                </p>
+
+                <pre class="example nohighlight" title="A witness list Credential signed by a quantum-resistant scheme">
+                    {
+                      "@context": [
+                        "https://www.w3.org/ns/credentials/v2",
+                        "https://w3id.org/vc-forgery-defense/v1rc1"
+                      ],
+                      "id": "https://university.example/witnesses",
+                      "type": ["VerifiableCredential", "WitnessListCredential"],
+                      "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+                      "validFrom": "2024-01-15T00:00:00Z",
+                      "credentialSubject": {
+                        "type": "WitnessList",
+                        "witnessSeed": "26ea4078-968d-4d98-aba7-695610c0dfb6",
+                        "witnessLength": 128,
+                        "witnessCount": 131072,
+                        "encodedWitnesses": "uQYF16SSSbR_LrMZFbFvbGkn8B7ggEZtov3KVL..."
+                      },
+                      "proof": {
+                        "type": "DataIntegrityProof",
+                        <span class="highlight">cryptosuite": "mldsa44-rdfc-2024"</span>,
+                        "verificationMethod": "did:example:issuer#pq-key-1",
+                        "proofValue": "z..."
+                      }
+                    }</pre>
 
                 <p>
                     For older credentials, the verifier may locate the witness list in some out-of-band manner; e.g., a university may
                     publish the location for all the credentials it has issued. New Verifiable Credentials may include information about the
-                    relevant witness list much like <a href="#s_bsl">status lists</a> references.
+                    relevant witness, added to the credential status alongside <a href="#s_bsl">status lists</a> references:
                 </p>
+
+                <pre
+                    id="base_example_forgery_list"
+                    class="example nohighlight"
+                    title="Verifiable credential with a reference to a forgery witness list"
+                >
+        {
+          "@context": [
+            "https://www.w3.org/ns/credentials/v2",
+            "https://www.w3.org/ns/credentials/examples/v2"
+          ],
+          "id": "https://university.example/Credential123",
+          "type": ["VerifiableCredential", "ExampleAlumniCredential"],
+          "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+          "validFrom": "2010-01-01T00:00:00Z",
+          "renderMethod": {
+            "type": "TemplateRendererMethod",
+            "renderSuite": "html",
+            "template": {
+              "id": "https://university.example/render-methods/alumnicredential.html",
+              "mediaType": "text/html",
+              "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
+            }
+          },
+          "credentialSubject": {
+            "id": "https://www.example.org/persons/pat",
+            "name": "Pat",
+            "alumniOf": {
+              "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
+              "name": "Example University"
+            },
+            "confidenceMethod": {
+              "type": "Multikey",
+              "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
+            }
+          },
+          "credentialSchema": {
+            "id": "https://university.example/Credential123-schema-credential",
+            "type": "JsonSchemaCredential"
+          },
+          "credentialStatus": [{
+            "type": "BitstringStatusListEntry",
+            "statusPurpose": "revocation",
+            "statusListIndex": "9989",
+            "statusListCredential": "https://university.example/CredentialStatusList"
+          },<span class="highlight">{
+            "type": "WitnessListEntry",
+            "witnessListCredential": "https://university.example/witnesses",
+            "witnessIndex": 5637
+          }</span>]
+        }
+      </pre>
             </section>
 
             <section>
@@ -1978,7 +2059,7 @@
                 class="example nohighlight vc"
                 data-vc-vm="https://example.edu/issuers/565049#key-1"
                 data-vc-tabs="eddsa-rdfc-2022 ecdsa-rdfc-2019 bbs-2023 jose sd-jwt cose qr"
-                title="A verifiable credential for alumni, with a reference to a render method, confidence method, credential JSON schema, and status list"
+                title="A verifiable credential for alumni, with a reference to a render method, confidence method, credential JSON schema, status and forgery lists"
             >
             {
               "@context": [
@@ -2014,13 +2095,16 @@
                 "id": "https://university.example/Credential123-schema-credential",
                 "type": "JsonSchemaCredential"
               },
-              "credentialStatus": {
-                "id": "https://university.example/statuslist#123456",
+              "credentialStatus": [{
                 "type": "BitstringStatusListEntry",
                 "statusPurpose": "revocation",
-                "statusListIndex": "123456",
+                "statusListIndex": "9989",
                 "statusListCredential": "https://university.example/CredentialStatusList"
-              }
+              },{
+                "type": "WitnessListEntry",
+                "witnessListCredential": "https://university.example/witnesses",
+                "witnessIndex": 5637
+              }]
             }
       </pre
             >
