@@ -208,6 +208,11 @@
                         publisher: "W3C",
                         href: "https://www.w3.org/TR/vc-di-quantum-resistant",
                     },
+                    "etsi-trust": {
+                        title: "Electronic Signatures and Trust Infrastructures (ESI); Trusted Lists, ETSI TS 119 612",
+                        publisher: "ETSI",
+                        href: "https://www.etsi.org/deliver/etsi_ts/119600_119699/119612/02.04.01_60/ts_119612v020401p.pdf",
+                    },
                     "fips-204": {
                         title: "Module-Lattice-Based Digital Signature Standard",
                         authors: [],
@@ -585,9 +590,9 @@
 
                 <p>
                     In the [[vc-data-model]] specification, as in the other documents, Verifiable Credentials and Presentations are mostly
-                    expressed in JSON [[rfc7519]], more specifically [[json-ld11]]. In this serialization, properties of claims are
-                    represented as JSON names, and values as JSON literals or objects. Subjects of claims are either explicitly identified
-                    by an `id` property, or implicitly by appearing as an object of another claim.
+                    expressed in JSON [[rfc7519]], more specifically [[[json-ld11]]] [[json-ld11]]. In this serialization, properties of
+                    claims are represented as JSON names, and values as JSON literals or objects. Subjects of claims are either explicitly
+                    identified by an `id` property, or implicitly by appearing as an object of another claim.
                 </p>
 
                 <p id="p_vocabularies">
@@ -604,7 +609,7 @@
                     The following JSON-LD code is an example for a simple Credential. It states that the person named "Pat", identified by
                     <code>https://www.example.org/persons/pat</code>, is an alumni of the Example University (identified by
                     <code>did:example:c276e12ec21ebfeb1f712ebc6f1</code>). The Credential is valid from the 1st of January 2010, and is
-                    issued by an entity identified by <code>did:example:2g55q912ec3476eba2l9812ecbfe</code>. Most of the properties in the
+                    issued by an entity identified by <code>did:example:university.example:CSSchool</code>. Most of the properties in the
                     Credential are from the standard Verifiable Credentials vocabulary (identified by
                     <code>https://www.w3.org/ns/credentials/v2</code>), but some terms (like `alumniOf`, `AlumniCredential`) are added by
                     the application-specific vocabulary referred to by <code>https://www.w3.org/ns/credentials/examples/v2</code>.
@@ -618,7 +623,7 @@
           ],
           "id": "https://university.example/Credential123",
           "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-          "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+          "issuer": "did:example:university.example:CSSchool",
           "validFrom": "2010-01-01T00:00:00Z",
           "credentialSubject": {
             "id": "https://www.example.org/persons/pat",
@@ -675,7 +680,7 @@
               ],
               "id": "https://university.example/Credential123",
               "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-              "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+              "issuer": "did:example:university.example:CSSchool",
               "validFrom": "2010-01-01T00:00:00Z",
               "validUntil": "2020-12-31T00:00:00Z",
               "credentialSubject": {
@@ -738,7 +743,7 @@
                       ],
                       "id": "https://university.example/Credential123",
                       "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-                      "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+                      "issuer": "did:example:university.example:CSSchool",
                       "validFrom": "2010-01-01T00:00:00Z",
                       "credentialSubject": {
                         "id": "https://www.example.org/persons/pat",
@@ -806,7 +811,7 @@
                       ],
                       "id": "https://university.example/Credential123",
                       "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-                      "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+                      "issuer": "did:example:university.example:CSSchool",
                       "validFrom": "2010-01-01T00:00:00Z",
                       <span class="highlight">"renderMethod": {
                         "type": "TemplateRendererMethod",
@@ -857,7 +862,7 @@
                 ],
                 "id": "https://university.example/Credential123",
                 "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-                "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+                "issuer": "did:example:university.example:CSSchool",
                 "validFrom": "2010-01-01T00:00:00Z",
                 "renderMethod": {
                   "type": "TemplateRendererMethod",
@@ -942,7 +947,7 @@
                 ],
                 "id": "https://university.example/Credential123",
                 "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-                "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+                "issuer": "did:example:university.example:CSSchool",
                 "validFrom": "2010-01-01T00:00:00Z",
                 "renderMethod": {
                   "type": "TemplateRendererMethod",
@@ -993,7 +998,7 @@
                       ],
                       "id": "https://university.example/Credential123",
                       "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-                      "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+                      "issuer": "did:example:university.example:CSSchool",
                       "validFrom": "2010-01-01T00:00:00Z",
                       "renderMethod": {
                         "type": "TemplateRendererMethod",
@@ -1088,7 +1093,7 @@
               ],
               "id": "https://university.example/Credential123",
               "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-              "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+              "issuer": "did:example:university.example:CSSchool",
               "validFrom": "2010-01-01T00:00:00Z",
               "renderMethod": {
                 "type": "TemplateRendererMethod",
@@ -1196,7 +1201,7 @@
               ],
               "id": "https://university.example/Credential123",
               "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-              "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+              "issuer": "did:example:university.example:CSSchool",
               "validFrom": "2010-01-01T00:00:00Z",
               "renderMethod": {
                 "type": "TemplateRendererMethod",
@@ -1452,12 +1457,13 @@
 
                         <p>
                             The full disclosue cryptosuites (i.e., the ones whose name contain the <code>rdfc</code> or
-                            <code>jcs</code> terms) follow a simple version of the proof generation pipeline as described in
-                            <a href="#proof-generation-steps">section 4.2.1</a>: the Credential is canonicalized (using either JCS or
-                            RDFC-1.0) and the result is hashed (using the hash functions as defined by the signature key). The calculation
-                            of the hash values depend on the canonicalization method: in the JCS case the canonical JSON data is hashed
-                            directly, whereas in the RDFC-1.0 case the individual canonicalized claims are first sorted and then
-                            concatenated before being hashed.
+                            <code>jcs</code> terms) follow a simple version of the proof generation pipeline as described in §<a
+                                href="#proof-generation-steps"
+                            ></a
+                            >: the Credential is canonicalized (using either JCS or RDFC-1.0) and the result is hashed (using the hash
+                            functions as defined by the signature key). The calculation of the hash values depend on the canonicalization
+                            method: in the JCS case the canonical JSON data is hashed directly, whereas in the RDFC-1.0 case the individual
+                            canonicalized claims are first sorted and then concatenated before being hashed.
                         </p>
                         <p>
                             However, before signing the hash values, there is an extra twist: the same pipeline is also used on a set of
@@ -1475,9 +1481,14 @@
                         <h5>Selective Disclosure Schemes</h5>
 
                         <p>
-                            The `bbs-2023`, and the cryptosuites marked with
-                            <code>sd</code> in their name provide selective disclosures of individual claims. In all cases, the process
-                            separates the <em>base proof</em> (calculated by the issuer for the holder), and the
+                            The `bbs-2023`, and the cryptosuites marked with <code>sd</code> in their names provide selective disclosures of
+                            individual claims. The fundamental idea of selective disclosure is that the Verifiable Credential is converted
+                            into a flat list of individual claims by the holder. The mandatory claims are hashed and signed together, and
+                            the selectively disclosable ones are signed separately before forwarding the information to the verifier.
+                        </p>
+
+                        <p>
+                            In all cases, the process separates the <em>base proof</em> (calculated by the issuer for the holder), and the
                             <em>derived proof</em> (which is typically calculated by the holder when selectively presenting credential
                             claims to the verifier).
                         </p>
@@ -1485,12 +1496,10 @@
                         <p>
                             To calculate the base proof, the Credential is supplemented with extra information that separates the
                             <em>mandatory</em> and <em>non-mandatory</em> claims. Using that information, the issuer's transformation step
-                            in
-                            <a href="#proof-generation-steps">section 4.2.1</a>
-                            produces a data structure containing the hash of the proof options (much like in the case of the full disclosure
-                            schemes) and of the set of mandatory claims, plus the identification of mandatory claims. Some elements of this
-                            data structure are then signed, the resulting structure is converted into CBOR, and encoded to provide as a
-                            multibase-encoded `proofValue`.
+                            in §<a href="#proof-generation-steps"></a> produces a data structure containing the hash of the proof options
+                            (much like in the case of the full disclosure schemes) and of the set of mandatory claims, plus the
+                            identification of mandatory claims. Some elements of this data structure are then signed, the resulting
+                            structure is converted into CBOR, and encoded to provide a multibase-encoded `proofValue`.
                         </p>
 
                         <p>
@@ -1502,24 +1511,25 @@
 
                         <p>
                             The verifier should be able to test the proof of the reveal document without having access to the original data
-                            and its (base) proof. With `ecdsa-sd-2023`, each non-mandatory claim is signed separately by the issuer using a
-                            common, ephemeral ECDSA secret key, whose public counterpart is part of the both the base and derived proof
-                            values. That can be used to check the disclosed non-mandatory claims. The `bbs-2023` cryptosuite relies on the
-                            cryptographic properties of the BBS scheme itself, which support the creation of proofs for the verification of
-                            selectively disclosed data. This is based on the mathematical nature of the BBS scheme: the
-                            <em>BBS signature</em> of all the claims (generated by the issuer and part of the base proof) can be reused by
-                            the holder to generate a <em>BBS Proof</em> of the subset of the claims (which is part of the derived proof).
-                            The BBS specific verification step ensures the required trust.
+                            and its (base) proof. Each non-mandatory claim is signed separately by the issuer using a common, ephemeral
+                            ECDSA secret key, whose public counterpart is part of the both the base and derived proof values. That can be
+                            used to check the disclosed non-mandatory claims. The `bbs-2023` cryptosuite relies on the cryptographic
+                            properties of the BBS scheme itself, which support the creation of proofs for the verification of selectively
+                            disclosed data. This is based on the mathematical nature of the BBS scheme: the <em>BBS signature</em> of all
+                            the claims (generated by the issuer and part of the base proof) can be reused by the holder to generate a
+                            <em>BBS Proof</em> of the subset of the claims (which is part of the derived proof). The BBS specific
+                            verification step ensures the required trust.
                         </p>
 
-                        <p>
+                        <aside class="note">
                             It is worth noting that the `bbs-2023` cryptosuite also offers a number of additional, privacy preserving
                             options; see the sections on
                             <a data-cite="vc-di-bbs#pseudonyms-with-hidden-pid">anonymous holder biding</a>,
                             <a data-cite="vc-di-bbs#pseudonyms-with-issuer-known-pid">pseudonyms with issuer-known id</a>, or
                             <a data-cite="vc-di-bbs#pseudonyms-with-hidden-pid">pseudonyms with hidden id</a>
                             in the [[[vc-di-bbs]]] specification.
-                        </p>
+                        </aside>
+
                         <aside class="issue">
                             Review is requested on SD, to check that the general description is valid for QR schemes as well.
                         </aside>
@@ -1569,7 +1579,7 @@
               ],
               "id": "https://university.example/Credential123",
               "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-              "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+              "issuer": "did:example:university.example:CSSchool",
               "validFrom": "2010-01-01T00:00:00Z",
               "renderMethod": {
                 "type": "TemplateRendererMethod",
@@ -1611,9 +1621,9 @@
                 "https://www.w3.org/ns/did/v1",
                 "https://w3id.org/security/multikey/v1"
               ],
-              "id": "did:example:2g55q912ec3476eba2l9812ecbfe#ecdsa-public-key",
+              "id": "did:example:university.example:CSSchool#ecdsa-public-key",
               "type": "Multikey",
-              "controller": "did:example:2g55q912ec3476eba2l9812ecbfe",
+              "controller": "did:example:university.example:CSSchool",
               "publicKeyMultibase": "z42twTcNeSYcnqg1FLuSFs2bsGH3ZqbRHFmvS9XMsYhjxvHN"
             }
           </pre
@@ -1787,7 +1797,7 @@
           ],
           "id": "https://university.example/Credential123",
           "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-          "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+          "issuer": "did:example:university.example:CSSchool",
           "validFrom": "2010-01-01T00:00:00Z",
           "renderMethod": {
             "type": "TemplateRendererMethod",
@@ -1835,7 +1845,7 @@
           ],
           "id": "https://university.example/CredentialStatusList",
           "type": ["VerifiableCredential", "BitstringStatusListCredential"],
-          "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe"",
+          "issuer": "did:example:university.example:CSSchool"",
           "validFrom": "2005-01-01T00:00:00",
           <span class="highlight">"credentialSubject": {
             "id": "https://university.example/statuslist#list",
@@ -1865,8 +1875,9 @@
                 <p>
                     The forgery defense mechanism defined by this specification is achieved by publishing a <em>witness list</em> that is
                     itself the subject of a separate Verifiable Credential. A “witness” in that list is, essentially, the most significant
-                    bits of a hash value generated from the credential itself, combined with a random seed per credential. The list combines a
-                    large number of such witnesses in one, encoded value, and the Credential is signed by, preferably, a quantum resistant scheme:
+                    bits of a hash value generated from the credential itself, combined with a random seed per credential. The list combines
+                    a large number of such witnesses in one, encoded value, and the Credential is signed by, preferably, a quantum resistant
+                    scheme:
                 </p>
 
                 <pre class="example nohighlight" title="A witness list Credential signed by a quantum-resistant scheme">
@@ -1877,7 +1888,7 @@
                       ],
                       "id": "https://university.example/witnesses",
                       "type": ["VerifiableCredential", "WitnessListCredential"],
-                      "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+                      "issuer": "did:example:university.example:CSSchool",
                       "validFrom": "2024-01-15T00:00:00Z",
                       "credentialSubject": {
                         "type": "WitnessList",
@@ -1912,7 +1923,7 @@
           ],
           "id": "https://university.example/Credential123",
           "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-          "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+          "issuer": "did:example:university.example:CSSchool",
           "validFrom": "2010-01-01T00:00:00Z",
           "renderMethod": {
             "type": "TemplateRendererMethod",
@@ -1955,7 +1966,45 @@
 
             <section>
                 <h2>Recognized Entities</h2>
-                <p>t.b.d.</p>
+                <p>
+                    The verifiable credential ecosystem relies on the ability of verifiers to determine whether a particular issuer is
+                    recognized to perform a particular action, such as issuing a certain type of verifiable credential. Historically, this
+                    determination has often been made through out-of-band processes, bilateral agreements, or proprietary registries that
+                    are difficult to discover, query, or reason about in an automated way. As verifiable credentials are increasingly
+                    deployed, the need for a standardized, interoperable mechanism to express and communicate recognition of entities that
+                    perform known actions has become critical. This is the problem area addressed by the
+                    [[[vc-recognized-entities]]] [[vc-recognized-entities]] specification.
+                </p>
+
+                <p>
+                    Rather than mandating a central registry for issuers, this specification choses a decentralized approach. Any entity — a
+                    local governmental body, a standard institution, a university office, or a local community — can issue a special
+                    Verifiable Credential that lists all potential issuers that it “recognizes” to act either as an issuer or a verifier
+                    (e.g., all schools of the university). The design may lead to a “Web of Recognition”: the same entity can be recognized
+                    as an issuer both by the university office _and_ the local governmental body, and the university office itself might be
+                    recognized by another institution, like the local Ministry of Higher Education. The specification also supports
+                    interoperability with existing “trust infrastructure”, such as X.509 [[rfc5280]] certificate authority lists and ETSI
+                    Trust Service Lists [[etsi-trust]].
+                </p>
+
+                <p><a href="#re_example"></a> shows the skeleton of a Verifiable Credential, issued by the administration of the Example University,
+                which attests that the administration of the School of Computer Science, respectively of Philosophy, can issue credentials.</p>
+
+                <pre
+                id="re_example"
+                class="example nohighlight"
+                title="Example for recognizing two issuers"
+                data-include="examples/re_example.json"></pre>
+
+                <aside class="note">
+                    It is interesting to note that the [[[vc-recognized-entities]]] specification is also a perfect example for how easily new
+                    Verifiable Credential types can be defined for specific areas. It simply boils down to the syntactic and semantic
+                    definition of bespoke new terms (e.g., `RecognizedEntity` or `recognizedTo`) to extend the core Verifiable Credential
+                    Data Model. Once those are defined and documented in the form of a vocabulary for JSON-LD, the terms can be used in a
+                    Verifiable Credential without further ado. Anyone can “publish” such a vocabulary, following some rules described in the
+                    <a data-cite="vc-data-model#extensibility">extensibility section</a> of the specification, no need for a central
+                    registration of the new terms.
+                </aside>
             </section>
 
             <section>
@@ -2051,7 +2100,9 @@
 
             <p>
                 <a href="#complete_example"></a> shows the alumni Credential example used throughout this document, with all the
-                constituents added. It is secured via different mechanisms defined for Verifiable Credentials.
+                constituents added. It is secured via different mechanisms defined for Verifiable Credentials. The issuer itself
+                has been recognized by the administration of the University (see <a href="#re_example"></a>), which is an
+                extra information for the verifier of this credential.
             </p>
 
             <pre
@@ -2059,7 +2110,7 @@
                 class="example nohighlight vc"
                 data-vc-vm="https://example.edu/issuers/565049#key-1"
                 data-vc-tabs="eddsa-rdfc-2022 ecdsa-rdfc-2019 bbs-2023 jose sd-jwt cose qr"
-                title="A verifiable credential for alumni, with a reference to a render method, confidence method, credential JSON schema, status and forgery lists"
+                title="A verifiable credential for alumni, with a reference to a render method, confidence method, credential JSON schema, status and forgery lists."
             >
             {
               "@context": [
@@ -2068,7 +2119,7 @@
               ],
               "id": "https://university.example/Credential123",
               "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-              "issuer": "did:example:2g55q912ec3476eba2l9812ecbfe",
+              "issuer": "did:example:university.example:CSSchool",
               "validFrom": "2010-01-01T00:00:00Z",
               "renderMethod": {
                 "type": "TemplateRendererMethod",
