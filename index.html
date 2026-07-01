@@ -335,7 +335,7 @@
                 Verifiable Credentials Working Group, fit together.
             </p>
         </section>
-        <section>
+        <section id="s_ecosystem">
             <h3>Ecosystem Overview</h3>
             <p>
                 The Verifiable Credential specifications rely on an ecosystem consisting of entities playing different "roles". The main
@@ -466,14 +466,18 @@
                 that are already issued, but whose signature keys may be compromised.
             </p>
 
-
             <p>
                 The verifiable credential ecosystem relies on the ability of verifiers to determine whether a particular issuer is
                 recognized to perform a particular action. The [[[vc-recognized-entities]]] [[vc-recognized-entities]] specification defines
-                an interoperable mechanism to express and communicate the recognition of entities that perform known actions like issuing or verifying
-                credentials.
+                an interoperable mechanism to express and communicate the recognition of entities that perform known actions like issuing or
+                verifying credentials.
             </p>
 
+            <p>
+                The [[[vcalm]]] [[vcalm]] specification defines HTTP APIs among the entities corresponding to the main “roles” in the
+                Verifiable Credential model (i.e., issuer, holder, and verifier, see also <a href="#s_ecosystem"></a>). The specification
+                also provides a reference model for components _within_ these roles, with the corresponding APIs among those components.
+            </p>
 
             <div class="note">
                 <p>
@@ -487,8 +491,7 @@
                 <p>
                     A revision cycle for some of the specifications has started in 2026. A number of documents have been re-issued as
                     Working Drafts (marked with a higher minor version number), and a number of new specifications have been added to
-                    become, eventually, Recommendations. The official
-                    <a href="https://www.w3.org/groups/wg/vc/publications/">publication list</a>
+                    become, eventually, Recommendations. The official <a href="https://www.w3.org/groups/wg/vc/publications/">publication list</a>
                     of the Working Group shows the exact status of the respective documents.
                 </p>
             </div>
@@ -1556,8 +1559,45 @@
             </section>
 
             <section>
-                <h2>VCALM</h2>
-                <p>t.b.d.</p>
+                <h2>An API for Lifecycle Management</h2>
+
+                <p>
+                    The [[[vcalm]]] [[vcalm]] specification provides a set of HTTP Application Programming Interfaces (HTTP APIs) and
+                    protocols for issuing, verifying, presenting, and managing Verifiable Credentials. It defines APIs among the entities
+                    corresponding to the main “roles” in the Verifiable Credential model (i.e., issuer, holder, and verifier, see also
+                    <a href="#s_ecosystem"></a>). The specification also provides a reference model for components _within_ these roles,
+                    with the corresponding APIs among those components; see also <a href="#vcalm_components"></a> below for the overall
+                    architecture.
+                </p>
+
+                <figure id="vcalm_roles">
+                    <img
+                        style="margin: auto; display: block; width: 27%"
+                        src="diagrams/vcalm_roles.svg"
+                        alt="Diagram showing the verifiable credential roles of Issuer, Holder, and Verifier."
+                    />
+                    <figcaption style="text-align: center">The roles forming the basis for the VC Data Model.</figcaption>
+                </figure>
+
+                <figure id="vcalm_components">
+                    <img
+                        style="margin: auto; display: block; width: 100%"
+                        src="diagrams/vcalm_components.svg"
+                        alt="API Components of Coordinators, Services, and Admin for Issuers, Verifiers, and Holders."
+                    />
+                    <figcaption style="text-align: center">
+                        Reference model for the API Components. Arrows indicate initiation of flows.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    The boundaries and interfaces among the components are defined to ensure interoperability and substitutability across
+                    the Verifiable Credential conformant ecosystem. This approach helps avoiding vendor lock-in and creates a pool of
+                    independent implementations of interoperating components. Any given implementation of a specific role (i.e., issuer or
+                    holder) may choose to aggregate any or all of the components of the model into single functional application. The
+                    individual components may be of a different nature (running on a browser or on a server, implemented in different
+                    programming languages, etc.), each executing just part of the overall functionality.
+                </p>
             </section>
         </section>
 
