@@ -615,27 +615,12 @@
                     the application-specific vocabulary referred to by <code>https://www.w3.org/ns/credentials/examples/v2</code>.
                 </p>
 
-                <pre id="base_example" class="example nohighlight" title="A simple alumni example credential">
-        {
-          "@context": [
-            "https://www.w3.org/ns/credentials/v2",
-            "https://www.w3.org/ns/credentials/examples/v2"
-          ],
-          "id": "https://university.example/Credential123",
-          "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-          "issuer": "did:example:university.example:CSSchool",
-          "validFrom": "2010-01-01T00:00:00Z",
-          "credentialSubject": {
-            "id": "https://www.example.org/persons/pat",
-            "name": "Pat",
-            "alumniOf": {
-              "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-              "name": "Example University"
-            }
-          }
-        }
-        </pre
-                >
+                <pre
+                    id="base_example"
+                    class="example nohighlight"
+                    title="A simple alumni example credential"
+                    data-include="examples/base_example.json"
+                ></pre>
 
                 <p>
                     <a href="#credential-example-claims"></a> shows the same Credential, but represented as a graph of claims, as described
@@ -664,36 +649,12 @@
                     encapsulated in a Presentation. This is how the Credential looks like in the JSON-LD serialization:
                 </p>
 
-                <pre class="example nohighlight" title="Presenting the credential">
-          {
-            "@context": [
-              "https://www.w3.org/ns/credentials/v2",
-              "https://www.w3.org/ns/credentials/examples/v2"
-            ],
-            "type": "VerifiablePresentation",
-            "id": "urn:uuid:313801ba-24b7-11ee-be02-ff560265cf9b",
-            "holder": "did:example:12345678",
-            <span class="highlight">"verifiableCredential": {
-              "@context": [
-                "https://www.w3.org/ns/credentials/v2",
-                "https://www.w3.org/ns/credentials/examples/v2"
-              ],
-              "id": "https://university.example/Credential123",
-              "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-              "issuer": "did:example:university.example:CSSchool",
-              "validFrom": "2010-01-01T00:00:00Z",
-              "validUntil": "2020-12-31T00:00:00Z",
-              "credentialSubject": {
-                "id": "https://www.example.org/persons/pat",
-                "name": "Pat",
-                "alumniOf": {
-                  "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-                  "name": "Example University"
-                }
-              }
-            }</span>
-          }
-        </pre>
+                <pre
+                    id="base_presentation_example"
+                    class="example nohighlight"
+                    title="Presenting the credential"
+                    data-include="examples/base_presentation_example.json"
+                ></pre>
 
                 <p>
                     Note that the holder could have presented several Credentials within the same presentation, or create a new Credential
@@ -733,32 +694,11 @@
                     <p class="note">The list of methods in the specification is not yet finalized.</p>
 
                     <pre
+                        id="example_with_confidence"
                         class="example nohighlight"
                         title="The alumni credential extended by a confidence method relying on a public EdDSA key"
-                    >
-                    {
-                      "@context": [
-                        "https://www.w3.org/ns/credentials/v2",
-                        "https://www.w3.org/ns/credentials/examples/v2"
-                      ],
-                      "id": "https://university.example/Credential123",
-                      "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-                      "issuer": "did:example:university.example:CSSchool",
-                      "validFrom": "2010-01-01T00:00:00Z",
-                      "credentialSubject": {
-                        "id": "https://www.example.org/persons/pat",
-                        "name": "Pat",
-                        "alumniOf": {
-                          "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-                          "name": "Example University"
-                        },
-                        <span class="highlight">"confidenceMethod": {
-                          "type": "Multikey",
-                          "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
-                        }</span>
-                      }
-                    }
-                  </pre>
+                        data-include="examples/example_with_confidence.json"
+                    ></pre>
                 </section>
                 <section>
                     <h2>Render Methods</h2>
@@ -794,48 +734,17 @@
                     <aside class="note">Other standard render methods might come to the fore</aside>
 
                     <p>
-                        <a href="#base_example_html_render"></a> adds an HTML-based render method to our alumni example. Note the usage of
-                        the <code>digestMultibase</code> property which adds an extra security to the choice of the HTML snippet. The
-                        snippet itself can be retrieved using the university's dedicated URL.
+                        <a href="#example_with_render"></a> adds an HTML-based render method to our alumni example. Note the usage of the
+                        <code>digestMultibase</code> property which adds an extra security to the choice of the HTML snippet. The snippet
+                        itself can be retrieved using the university's dedicated URL.
                     </p>
 
                     <pre
-                        id="base_example_html_render"
+                        id="example_with_render"
                         class="example nohighlight"
                         title="The alumni credential to be rendered with an HTML based render method"
-                    >
-                    {
-                      "@context": [
-                        "https://www.w3.org/ns/credentials/v2",
-                        "https://www.w3.org/ns/credentials/examples/v2"
-                      ],
-                      "id": "https://university.example/Credential123",
-                      "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-                      "issuer": "did:example:university.example:CSSchool",
-                      "validFrom": "2010-01-01T00:00:00Z",
-                      <span class="highlight">"renderMethod": {
-                        "type": "TemplateRendererMethod",
-                        "renderSuite": "html",
-                        "template": {
-                          "id": "https://university.example/render-methods/alumnicredential.html",
-                          "mediaType": "text/html",
-                          "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
-                        }
-                      },</span>
-                      "credentialSubject": {
-                        "id": "https://www.example.org/persons/pat",
-                        "name": "Pat",
-                        "alumniOf": {
-                          "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-                          "name": "Example University"
-                        },
-                        "confidenceMethod": {
-                          "type": "Multikey",
-                          "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
-                        }
-                      }
-                    }
-                  </pre>
+                        data-include="examples/example_with_render.json"
+                    ></pre>
                 </section>
                 <section id="s_js_schema">
                     <h4>Checking with JSON Schemas</h4>
@@ -851,84 +760,23 @@
                     <p>Consider the following example:</p>
 
                     <pre
-                        id="base_example_schema"
+                        id="example_with_schema"
                         class="example nohighlight"
                         title="The alumni credential with a reference to a JSON schema"
-                    >
-              {
-                "@context": [
-                  "https://www.w3.org/ns/credentials/v2",
-                  "https://www.w3.org/ns/credentials/examples/v2"
-                ],
-                "id": "https://university.example/Credential123",
-                "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-                "issuer": "did:example:university.example:CSSchool",
-                "validFrom": "2010-01-01T00:00:00Z",
-                "renderMethod": {
-                  "type": "TemplateRendererMethod",
-                  "renderSuite": "html",
-                  "template": {
-                    "id": "https://university.example/render-methods/alumnicredential.html",
-                    "mediaType": "text/html",
-                    "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
-                  }
-                },
-                "credentialSubject": {
-                  "id": "https://www.example.org/persons/pat",
-                  "name": "Pat",
-                  "alumniOf": {
-                    "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-                    "name": "Example University"
-                  },
-                  "confidenceMethod": {
-                    "type": "Multikey",
-                    "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
-                  }
-                },
-                <span class="highlight">"credentialSchema": {
-                  "id": "https://university.example/Credential-schema.json",
-                  "type": "JsonSchema"
-                }</span>
-              }
-            </pre>
+                        data-include="examples/example_with_schema.json"
+                    ></pre>
 
                     <p>
                         When dereferenced, the URL `https://university.example/Credential-schema.json` should return a JSON Schema, for
                         example:
                     </p>
 
-                    <pre class="example nohighlight" title="Skeleton of a JSON schema for the alumni credential">
-              {
-                "$id": "https://university.example/schemas/credential.json",
-                "$schema": "https://json-schema.org/draft/2020-12/schema",
-                "title": "ExampleAlumniCredential",
-                "description": "Alumni Credential using JsonSchema",
-                "type": "object",
-                "properties": {
-                  "renderMethod": {
-                    "type": "object",
-                    "…"
-                  }
-                  "credentialSubject": {
-                    "type": "object",
-                    "properties": {
-                      "alumniOf": {
-                        "type": "string",
-                        "format": "url"
-                      },
-                      "confidenceMethod": {
-                        "type": "object",
-                        "…"
-                      }
-                    },
-                    "required": [
-                      "alumniOf"
-                    ]
-                  }
-                }
-              }
-            </pre
-                    >
+                    <pre
+                        id="example_schema"
+                        class="example nohighlight"
+                        title="Skeleton of a JSON schema for the alumni credential"
+                        data-include="examples/example_schema.json"
+                    ></pre>
 
                     <p>Using this JSON Schema, a verifier can check whether the Credential is structurally valid or not.</p>
 
@@ -936,46 +784,15 @@
                         For security reasons one may want to go a step further: check/verify the JSON Schema itself to see if, for example,
                         it has been tampered with. This can be done by referring to the JSON Schema
                         <em>indirectly through a separate Verifiable Credential</em>. The reference to such a Verifiable Credential looks
-                        very much like <a href="#base_example_schema"></a> except for the value of the `type`:
+                        very much like <a href="#example_with_schema"></a> except for the value of the `type`:
                     </p>
 
-                    <pre class="example nohighlight" title="A simple alumni credential with a JSON schema credential">
-              {
-                "@context": [
-                  "https://www.w3.org/ns/credentials/v2",
-                  "https://www.w3.org/ns/credentials/examples/v2"
-                ],
-                "id": "https://university.example/Credential123",
-                "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-                "issuer": "did:example:university.example:CSSchool",
-                "validFrom": "2010-01-01T00:00:00Z",
-                "renderMethod": {
-                  "type": "TemplateRendererMethod",
-                  "renderSuite": "html",
-                  "template": {
-                    "id": "https://university.example/render-methods/alumnicredential.html",
-                    "mediaType": "text/html",
-                    "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
-                  }
-                },
-                "credentialSubject": {
-                  "id": "https://www.example.org/persons/pat",
-                  "name": "Pat",
-                  "alumniOf": {
-                    "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-                    "name": "Example University"
-                  },
-                  "confidenceMethod": {
-                    "type": "Multikey",
-                    "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
-                  }
-                },
-                <span class="highlight">"credentialSchema": {
-                  "id": "https://university.example/Credential-schema-credential",
-                  "type": "JsonSchemaCredential"
-                }</span>
-              }
-            </pre>
+                    <pre
+                        id="example_with_schema_ref"
+                        class="example nohighlight"
+                        title="A simple alumni credential with a JSON schema credential"
+                        data-include="examples/example_with_schema_ref.json"
+                    ></pre>
 
                     <p>
                         In this case, when dereferenced, the URL `https://university.example/Credential-schema-credential` should return a
@@ -988,46 +805,14 @@
             </section>
             <section>
                 <h2>Example: the Alumni Credential</h2>
-                <p>For reference, <a href="#base_example_ref"></a> represents the full alumni example Credential.</p>
+                <p>For reference, <a href="#example_credential"></a> represents the full alumni example Credential.</p>
 
-                <pre id="base_example_ref" class="example nohighlight" title="A simple alumni credential with a JSON schema">
-                    {
-                      "@context": [
-                        "https://www.w3.org/ns/credentials/v2",
-                        "https://www.w3.org/ns/credentials/examples/v2"
-                      ],
-                      "id": "https://university.example/Credential123",
-                      "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-                      "issuer": "did:example:university.example:CSSchool",
-                      "validFrom": "2010-01-01T00:00:00Z",
-                      "renderMethod": {
-                        "type": "TemplateRendererMethod",
-                        "renderSuite": "html",
-                        "template": {
-                          "id": "https://university.example/render-methods/alumnicredential.html",
-                          "mediaType": "text/html",
-                          "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
-                        }
-                      },
-                      "credentialSubject": {
-                        "id": "https://www.example.org/persons/pat",
-                        "name": "Pat",
-                        "alumniOf": {
-                          "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-                          "name": "Example University"
-                        },
-                        "confidenceMethod": {
-                          "type": "Multikey",
-                          "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
-                        }
-                      },
-                      "credentialSchema": {
-                        "id": "https://university.example/Credential-schema.json",
-                        "type": "JsonSchema"
-                      }
-                    }
-                  </pre
-                >
+                <pre
+                    id="example_credential"
+                    class="example nohighlight"
+                    title="A simple alumni credential with a JSON schema"
+                    data-include="examples/example_credential.json"
+                ></pre>
             </section>
         </section>
 
@@ -1052,7 +837,7 @@
                     <a data-cite="vc-jose-cose#with-jose">section</a> of the [[vc-jose-cose]] specification. These are encoded,
                     concatenated, and signed, to be transferred in a compact form by one entity to another (e.g., sent by the holder to the
                     verifier). All the intricate details on signatures, encryption keys, etc., are defined by the IETF specifications; see
-                    <a href="#base_example_jwt_unencoded"></a> for a specific case.
+                    <a href="#secured_example_jwt"></a> for a specific case.
                 </p>
 
                 <p>
@@ -1074,55 +859,19 @@
                     <h4>Example: the Core Example Secured with JOSE and COSE</h4>
 
                     <p>
-                        <a href="#base_example_jwt_unencoded"></a> shows the Credential example shown in <a href="#base_example"></a>,
-                        enriched with a reference to a JSON Schema in <a href="#base_example_schema"></a>. It is secured by two different
-                        enveloping proofs, namely JOSE and COSE.
+                        <a href="#secured_example_jwt"></a> shows the Credential example shown in <a href="#base_example"></a>, enriched
+                        with a reference to a JSON Schema in <a href="#example_with_schema"></a>. It is secured by two different enveloping
+                        proofs, namely JOSE and COSE.
                     </p>
 
                     <pre
-                        id="base_example_jwt_unencoded"
+                        id="secured_example_jwt"
                         class="example nohighlight vc"
                         title="The alumni credential in JWT unencoded"
+                        data-include="examples/example_credential.json"
                         data-vc-vm="https://university.example/issuers/565049#key-1"
                         data-vc-tabs="jose cose"
-                    >
-            {
-              "@context": [
-                "https://www.w3.org/ns/credentials/v2",
-                "https://www.w3.org/ns/credentials/examples/v2"
-              ],
-              "id": "https://university.example/Credential123",
-              "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-              "issuer": "did:example:university.example:CSSchool",
-              "validFrom": "2010-01-01T00:00:00Z",
-              "renderMethod": {
-                "type": "TemplateRendererMethod",
-                "renderSuite": "html",
-                "template": {
-                  "id": "https://university.example/render-methods/alumnicredential.html",
-                  "mediaType": "text/html",
-                  "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
-                }
-              },
-              "credentialSubject": {
-                "id": "https://www.example.org/persons/pat",
-                "name": "Pat",
-                "alumniOf": {
-                  "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-                  "name": "Example University"
-                },
-                "confidenceMethod": {
-                  "type": "Multikey",
-                  "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
-                }
-              },
-              "credentialSchema": {
-                "id": "https://university.example/Credential123-schema-credential",
-                "type": "JsonSchemaCredential"
-              }
-            }
-          </pre
-                    >
+                    ></pre>
                 </section>
             </section>
 
@@ -1193,50 +942,12 @@
                         the proof itself:
                     </p>
 
-                    <pre class="example nohighlight" title="Skeleton of a proof added to a credential">
-            {
-              "@context": [
-                "https://www.w3.org/ns/credentials/v2",
-                "https://www.w3.org/ns/credentials/examples/v2"
-              ],
-              "id": "https://university.example/Credential123",
-              "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-              "issuer": "did:example:university.example:CSSchool",
-              "validFrom": "2010-01-01T00:00:00Z",
-              "renderMethod": {
-                "type": "TemplateRendererMethod",
-                "renderSuite": "html",
-                "template": {
-                  "id": "https://university.example/render-methods/alumnicredential.html",
-                  "mediaType": "text/html",
-                  "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
-                }
-              },
-              "credentialSubject": {
-                "id": "https://www.example.org/persons/pat",
-                "name": "Pat",
-                "alumniOf": {
-                  "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-                  "name": "Example University"
-                },
-                "confidenceMethod": {
-                  "type": "Multikey",
-                  "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
-                }
-              },
-              "credentialSchema": {
-                "id": "https://university.example/Credential123-schema-credential",
-                "type": "JsonSchemaCredential"
-              },
-              <span class="highlight">"proof": {
-                "type": "DataIntegrityProof",</span>
-                <span class="comment">…
-                // All the details about the proof
-                …</span>
-                <span class="highlight">"proofValue": "zQeVb…Wx"
-              }</span>
-            }
-          </pre>
+                    <pre
+                        id="secured_example_di_skeleton"
+                        class="example nohighlight"
+                        title="Skeleton of an embedded proof added to a credential"
+                        data-include="examples/secured_example_di_skeleton.json"
+                    ></pre>
 
                     <p>Note the `proofValue` property, whose object is the result of the proof generation process.</p>
 
@@ -1561,73 +1272,30 @@
 
                     <p>
                         <a href="#base_example_secured_di"></a> shows the Credential example, shown in <a href="#base_example"></a> and
-                        enriched with a reference to a JSON Schema in <a href="#base_example_schema"></a>. It is secured by two different
+                        enriched with a reference to a JSON Schema in <a href="#example_with_schema"></a>. It is secured by two different
                         embedded proofs, using the `ecdsa-rdfc-2019` and `eddsa-rdfc-2022` cryptosuites.
                     </p>
 
                     <pre
                         id="base_example_secured_di"
                         class="example nohighlight vc"
-                        title="EdDSA and ECDSA proofs added to the alumni credential"
+                        title="Embedded EdDSA and ECDSA proofs added to the alumni credential"
+                        data-include="examples/example_credential.json"
                         data-vc-vm="https://university.example/issuers/565049#key-1"
                         data-vc-tabs="eddsa-rdfc-2022 ecdsa-rdfc-2019"
-                    >
-            {
-              "@context": [
-                "https://www.w3.org/ns/credentials/v2",
-                "https://www.w3.org/ns/credentials/examples/v2"
-              ],
-              "id": "https://university.example/Credential123",
-              "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-              "issuer": "did:example:university.example:CSSchool",
-              "validFrom": "2010-01-01T00:00:00Z",
-              "renderMethod": {
-                "type": "TemplateRendererMethod",
-                "renderSuite": "html",
-                "template": {
-                  "id": "https://university.example/render-methods/alumnicredential.html",
-                  "mediaType": "text/html",
-                  "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
-                }
-              },
-              "credentialSubject": {
-                "id": "https://www.example.org/persons/pat",
-                "name": "Pat",
-                "alumniOf": {
-                  "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-                  "name": "Example University"
-                },
-                "confidenceMethod": {
-                  "type": "Multikey",
-                  "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
-                }
-              },
-              "credentialSchema": {
-                "id": "https://university.example/Credential123-schema-credential",
-                "type": "JsonSchemaCredential"
-              }
-            }
-          </pre
-                    >
+                    ></pre>
 
                     <p>
                         When dereferenced, the URL value of the `verificationMethod` property should return a public key in Multikey format.
                         For example:
                     </p>
 
-                    <pre class="example nohighlight" title="An ECDSA public key">
-            {
-              "@context": [
-                "https://www.w3.org/ns/did/v1",
-                "https://w3id.org/security/multikey/v1"
-              ],
-              "id": "did:example:university.example:CSSchool#ecdsa-public-key",
-              "type": "Multikey",
-              "controller": "did:example:university.example:CSSchool",
-              "publicKeyMultibase": "z42twTcNeSYcnqg1FLuSFs2bsGH3ZqbRHFmvS9XMsYhjxvHN"
-            }
-          </pre
-                    >
+                    <pre
+                        id="ecdsa_public_key"
+                        class="example nohighlight"
+                        title="An ECDSA public key"
+                        data-include="examples/ecdsa_public_key.json"
+                    ></pre>
                     <p>
                         Note that the value of the `verificationMethod` property may have been the public key itself, instead of a reference
                         to a separate resource containing the key.
@@ -1694,37 +1362,19 @@
                     whose subject cannot be simply expressed in JSON:
                 </p>
 
-                <pre class="example nohighlight" title="Verifiable Credential for the MRZ data">
-  {
-    "@context": [
-      "https://www.w3.org/ns/credentials/v2",
-      "https://w3id.org/citizenship/v2",
-      "https://w3id.org/citizenship/utopia/v1"
-    ],
-    "type": [
-      "VerifiableCredential",
-      "OpticalBarcodeCredential"
-    ],
-    "issuer": "did:web:immigration.utopia.example",
-    "credentialSubject": {
-      "type": "MachineReadableZone",
-    },
-    "proof": {
-      "type": "DataIntegrity",
-      "cryptosuite": "ecdsa-xi-2023",
-      "verificationMethod": "did:web:immigration.utopia.example#key-4"
-      "proofValue": "z4peo48uwK2EF4Fta8P...HzQMDYJ34r9gL"
-    }
-  }
-            </pre
-                >
+                <pre
+                    id="mrz_credential"
+                    class="example nohighlight"
+                    title="Verifiable Credential for the MRZ data"
+                    data-include="examples/mrz_credential.json"
+                ></pre>
 
                 <p>The `MachineReadableZone` type means to take the data directly from the MRZ, without change.</p>
                 <p>
-                    Note the usage of the `ecdsa-xi-2023` cryptosuite (listed in <a href="#cryptosuites-table"></a>): it allows the
-                    inclusion of additional, external data to be "added" to the canonicalized JSON-LD data before signature. This is how the
-                    proof for the MRZ data is combined with that of the full Credential. The result is a QR code appearing on the front of
-                    the employment card on <a href="#ead-front"></a>:
+                    Note the usage of the `ecdsa-xi-2023` cryptosuite (listed in <a href="#cryptosuites-table"></a>): it allows the addition
+                    of additional, external data to the canonicalized JSON-LD data before signature. This is how the proof for the MRZ data
+                    is combined with that of the full Credential. The result is a QR code appearing on the front of the employment card on
+                    <a href="#ead-front"></a>:
                 </p>
 
                 <figure id="ead-front">
@@ -1780,81 +1430,29 @@
                     used to add this additional information to a Verifiable Credential.
                 </p>
                 <p>
-                    <a href="#base_example_status_list"></a> shows the example from <a href="#base_example_secured_di"></a>, combined with
+                    <a href="#example_with_status_list"></a> shows the example from <a href="#base_example_secured_di"></a>, combined with
                     the information on the credential status: the purpose of that status information, the reference to the bitstring, and
                     the index into this bitstring for the enclosing credential:
                 </p>
 
                 <pre
-                    id="base_example_status_list"
+                    id="example_with_status_list"
                     class="example nohighlight"
                     title="Verifiable credential with a reference to a status list"
-                >
-        {
-          "@context": [
-            "https://www.w3.org/ns/credentials/v2",
-            "https://www.w3.org/ns/credentials/examples/v2"
-          ],
-          "id": "https://university.example/Credential123",
-          "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-          "issuer": "did:example:university.example:CSSchool",
-          "validFrom": "2010-01-01T00:00:00Z",
-          "renderMethod": {
-            "type": "TemplateRendererMethod",
-            "renderSuite": "html",
-            "template": {
-              "id": "https://university.example/render-methods/alumnicredential.html",
-              "mediaType": "text/html",
-              "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
-            }
-          },
-          "credentialSubject": {
-            "id": "https://www.example.org/persons/pat",
-            "name": "Pat",
-            "alumniOf": {
-              "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-              "name": "Example University"
-            },
-            "confidenceMethod": {
-              "type": "Multikey",
-              "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
-            }
-          },
-          "credentialSchema": {
-            "id": "https://university.example/Credential123-schema-credential",
-            "type": "JsonSchemaCredential"
-          },
-          <span class="highlight2">"credentialStatus": {
-            "type": "BitstringStatusListEntry",
-            "statusPurpose": "revocation",
-            "statusListIndex": "9989",
-            "statusListCredential": "https://university.example/CredentialStatusList"
-          }</span>
-        }
-      </pre>
+                    data-include="examples/base_example_status_list.json"
+                ></pre>
 
                 <p>
                     The `statusListCredential` property, when dereferenced, should return a <em>separate</em> Credential for the status
                     list. The status list itself is the subject of that Credential (which, of course, can also be signed). An example is:
                 </p>
 
-                <pre id="status_list_credential_example" class="example nohighlight" title="A credential for a bitstring status list">
-        {
-          "@context": [
-            "https://www.w3.org/ns/credentials/v2"
-          ],
-          "id": "https://university.example/CredentialStatusList",
-          "type": ["VerifiableCredential", "BitstringStatusListCredential"],
-          "issuer": "did:example:university.example:CSSchool"",
-          "validFrom": "2005-01-01T00:00:00",
-          <span class="highlight">"credentialSubject": {
-            "id": "https://university.example/statuslist#list",
-            "type": "BitstringStatusList",
-            "statusPurpose": "revocation",
-            "encodedList": "uH4sIAAAAAAAAA-3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAIC3AYbSVKsAQAAA"
-          }</span>
-        }
-      </pre>
+                <pre
+                    id="status_list_credential"
+                    class="example nohighlight"
+                    title="A credential for a bitstring status list"
+                    data-include="examples/status_list_credential.json"
+                ></pre>
 
                 <p>
                     The core property in this case is `encodedList`, which is a base64url encoded version of the GZIP compressed bitstring
@@ -1880,30 +1478,12 @@
                     scheme:
                 </p>
 
-                <pre class="example nohighlight" title="A witness list Credential signed by a quantum-resistant scheme">
-                    {
-                      "@context": [
-                        "https://www.w3.org/ns/credentials/v2",
-                        "https://w3id.org/vc-forgery-defense/v1rc1"
-                      ],
-                      "id": "https://university.example/witnesses",
-                      "type": ["VerifiableCredential", "WitnessListCredential"],
-                      "issuer": "did:example:university.example:CSSchool",
-                      "validFrom": "2024-01-15T00:00:00Z",
-                      "credentialSubject": {
-                        "type": "WitnessList",
-                        "witnessSeed": "26ea4078-968d-4d98-aba7-695610c0dfb6",
-                        "witnessLength": 128,
-                        "witnessCount": 131072,
-                        "encodedWitnesses": "uQYF16SSSbR_LrMZFbFvbGkn8B7ggEZtov3KVL..."
-                      },
-                      "proof": {
-                        "type": "DataIntegrityProof",
-                        <span class="highlight">cryptosuite": "mldsa44-rdfc-2024"</span>,
-                        "verificationMethod": "did:example:issuer#pq-key-1",
-                        "proofValue": "z..."
-                      }
-                    }</pre>
+                <pre
+                    id="witness_list_credential"
+                    class="example nohighlight"
+                    title="A witness list Credential signed using a quantum-resistant scheme"
+                    data-include="examples/witness_list_credential.json"
+                ></pre>
 
                 <p>
                     For older credentials, the verifier may locate the witness list in some out-of-band manner; e.g., a university may
@@ -1912,56 +1492,11 @@
                 </p>
 
                 <pre
-                    id="base_example_forgery_list"
+                    id="example_with_forgery_list"
                     class="example nohighlight"
                     title="Verifiable credential with a reference to a forgery witness list"
-                >
-        {
-          "@context": [
-            "https://www.w3.org/ns/credentials/v2",
-            "https://www.w3.org/ns/credentials/examples/v2"
-          ],
-          "id": "https://university.example/Credential123",
-          "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-          "issuer": "did:example:university.example:CSSchool",
-          "validFrom": "2010-01-01T00:00:00Z",
-          "renderMethod": {
-            "type": "TemplateRendererMethod",
-            "renderSuite": "html",
-            "template": {
-              "id": "https://university.example/render-methods/alumnicredential.html",
-              "mediaType": "text/html",
-              "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
-            }
-          },
-          "credentialSubject": {
-            "id": "https://www.example.org/persons/pat",
-            "name": "Pat",
-            "alumniOf": {
-              "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-              "name": "Example University"
-            },
-            "confidenceMethod": {
-              "type": "Multikey",
-              "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
-            }
-          },
-          "credentialSchema": {
-            "id": "https://university.example/Credential123-schema-credential",
-            "type": "JsonSchemaCredential"
-          },
-          "credentialStatus": [{
-            "type": "BitstringStatusListEntry",
-            "statusPurpose": "revocation",
-            "statusListIndex": "9989",
-            "statusListCredential": "https://university.example/CredentialStatusList"
-          },<span class="highlight">{
-            "type": "WitnessListEntry",
-            "witnessListCredential": "https://university.example/witnesses",
-            "witnessIndex": 5637
-          }</span>]
-        }
-      </pre>
+                    data-include="examples/example_with_forgery_list.json"
+                ></pre>
             </section>
 
             <section>
@@ -1987,18 +1522,22 @@
                     Trust Service Lists [[etsi-trust]].
                 </p>
 
-                <p><a href="#re_example"></a> shows the skeleton of a Verifiable Credential, issued by the administration of the Example University,
-                which attests that the administration of the School of Computer Science, respectively of Philosophy, can issue credentials.</p>
+                <p>
+                    <a href="#recognized_entities_credential"></a> shows the skeleton of a Verifiable Credential, issued by the
+                    administration of the Example University, which attests that the administration of the School of Computer Science,
+                    respectively of Philosophy, can issue credentials.
+                </p>
 
                 <pre
-                id="re_example"
-                class="example nohighlight"
-                title="Example for recognizing two issuers"
-                data-include="examples/re_example.json"></pre>
+                    id="recognized_entities_credential"
+                    class="example nohighlight"
+                    title="Example for recognizing two issuers"
+                    data-include="examples/recognized_entities_credential.json"
+                ></pre>
 
                 <aside class="note">
-                    It is interesting to note that the [[[vc-recognized-entities]]] specification is also a perfect example for how easily new
-                    Verifiable Credential types can be defined for specific areas. It simply boils down to the syntactic and semantic
+                    It is interesting to note that the [[[vc-recognized-entities]]] specification is also a perfect example for how easily
+                    new Verifiable Credential types can be defined for specific areas. It simply boils down to the syntactic and semantic
                     definition of bespoke new terms (e.g., `RecognizedEntity` or `recognizedTo`) to extend the core Verifiable Credential
                     Data Model. Once those are defined and documented in the form of a vocabulary for JSON-LD, the terms can be used in a
                     Verifiable Credential without further ado. Anyone can “publish” such a vocabulary, following some rules described in the
@@ -2099,66 +1638,20 @@
             <h2>The Alumni Credential</h2>
 
             <p>
-                <a href="#complete_example"></a> shows the alumni Credential example used throughout this document, with all the
-                constituents added. It is secured via different mechanisms defined for Verifiable Credentials. The issuer itself
-                has been recognized by the administration of the University (see <a href="#re_example"></a>), which is an
+                <a href="#example_verifiable_credential"></a> shows the alumni Credential example used throughout this document, with all
+                the constituents added. It is secured via different mechanisms defined for Verifiable Credentials. The issuer itself has
+                been recognized by the administration of the University (see <a href="#recognized_entities_credential"></a>), which is an
                 extra information for the verifier of this credential.
             </p>
 
             <pre
-                id="complete_example"
+                id="example_verifiable_credential"
                 class="example nohighlight vc"
+                data-include="examples/example_verifiable_credential.json"
                 data-vc-vm="https://example.edu/issuers/565049#key-1"
                 data-vc-tabs="eddsa-rdfc-2022 ecdsa-rdfc-2019 bbs-2023 jose sd-jwt cose qr"
                 title="A verifiable credential for alumni, with a reference to a render method, confidence method, credential JSON schema, status and forgery lists."
-            >
-            {
-              "@context": [
-                "https://www.w3.org/ns/credentials/v2",
-                "https://www.w3.org/ns/credentials/examples/v2"
-              ],
-              "id": "https://university.example/Credential123",
-              "type": ["VerifiableCredential", "ExampleAlumniCredential"],
-              "issuer": "did:example:university.example:CSSchool",
-              "validFrom": "2010-01-01T00:00:00Z",
-              "renderMethod": {
-                "type": "TemplateRendererMethod",
-                "renderSuite": "html",
-                "template": {
-                  "id": "https://university.example/render-methods/alumnicredential.html",
-                  "mediaType": "text/html",
-                  "digestMultibase": "zQmerWC85Wg6wFl9znFCwYxApG270iEu5h6JqWAPdhyxz2dR"
-                }
-              },
-              "credentialSubject": {
-                "id": "https://www.example.org/persons/pat",
-                "name": "Pat",
-                "alumniOf": {
-                  "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
-                  "name": "Example University"
-                },
-                "confidenceMethod": {
-                  "type": "Multikey",
-                  "publicKeyMultibase": "z6Mkf5rGMoatrSj1f4CyvuHBeXJELe9RPdzo2PKGNCKVtZxP"
-                }
-              },
-              "credentialSchema": {
-                "id": "https://university.example/Credential123-schema-credential",
-                "type": "JsonSchemaCredential"
-              },
-              "credentialStatus": [{
-                "type": "BitstringStatusListEntry",
-                "statusPurpose": "revocation",
-                "statusListIndex": "9989",
-                "statusListCredential": "https://university.example/CredentialStatusList"
-              },{
-                "type": "WitnessListEntry",
-                "witnessListCredential": "https://university.example/witnesses",
-                "witnessIndex": 5637
-              }]
-            }
-      </pre
-            >
+            ></pre>
         </section>
 
         <aside class="issue">
