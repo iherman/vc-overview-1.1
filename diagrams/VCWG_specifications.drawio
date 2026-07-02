@@ -34,32 +34,32 @@
         <mxCell id="r7VOtmBWi9sTdI5Oyx6i-34" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=none;dashed=1;labelBackgroundColor=none;" value="" vertex="1">
           <mxGeometry height="420" width="310" x="590.25" y="456" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;JOSE and COSE&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;&lt;i&gt;Enveloping proofs using JWS, SD-JWT, or CBOR&lt;/i&gt;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-jose-cose/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-6">
+        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;JOSE and COSE&lt;br&gt;&lt;/span&gt;&lt;i style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Enveloping proofs using JWS, SD-JWT, or CBOR&lt;/font&gt;&lt;/i&gt;&lt;br&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-jose-cose/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-6">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="50" width="237.5" x="630.245" y="476" as="geometry" />
+            <mxGeometry height="64" width="237.5" x="630.25" y="476" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="r7VOtmBWi9sTdI5Oyx6i-33" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=none;dashed=1;labelBackgroundColor=none;" value="" vertex="1">
           <mxGeometry height="420" width="310" x="240.25" y="456" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;span style=&quot;font-size: 20px;&quot;&gt;Ed&lt;/span&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;DSA Cryptosuites&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;i&gt;Data Integrity with Edwards elliptic curves&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-di-eddsa/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-3">
+        <UserObject label="&lt;span style=&quot;font-size: 20px;&quot;&gt;Ed&lt;/span&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;DSA Cryptosuites&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;i style=&quot;&quot;&gt;Data Integrity with Edwards elliptic curves&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-di-eddsa/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-3">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="50" width="215" x="320.245" y="553" as="geometry" />
+            <mxGeometry height="64" width="215" x="320.245" y="553" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="&lt;span style=&quot;font-size: 20px;&quot;&gt;ECDSA Cryptosuites&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;i&gt;Data Integrity with NIST elliptic curves&lt;/i&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-di-ecdsa/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-4">
+        <UserObject label="&lt;span style=&quot;font-size: 20px;&quot;&gt;ECDSA Cryptosuites&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;i style=&quot;&quot;&gt;Data Integrity with NIST elliptic curves&lt;/i&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-di-ecdsa/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-4">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="50" width="215" x="320.245" y="627" as="geometry" />
+            <mxGeometry height="64" width="215" x="320.245" y="627" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="&lt;span style=&quot;font-size: 20px;&quot;&gt;BBS Cryptosuites&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;i&gt;Data Integrity with BBS selective disclosures&lt;/i&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-di-bbs/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-5">
+        <UserObject label="&lt;span style=&quot;font-size: 20px;&quot;&gt;BBS Cryptosuites&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;i style=&quot;&quot;&gt;Data Integrity with BBS selective disclosures&lt;/i&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-di-bbs/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-5">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="50" width="215" x="320.245" y="702" as="geometry" />
+            <mxGeometry height="64" width="215" x="320.245" y="702" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="&lt;font style=&quot;font-size: 20px;&quot;&gt;Data Integrity&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;i&gt;General structure of embedded proofs&lt;/i&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-data-integrity/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-2">
+        <UserObject label="&lt;font style=&quot;font-size: 20px;&quot;&gt;Data Integrity&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;i style=&quot;&quot;&gt;General structure of embedded proofs&lt;/i&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-data-integrity/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-2">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="50" width="237" x="294.245" y="476" as="geometry" />
+            <mxGeometry height="64" width="237" x="294.25" y="476" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="r7VOtmBWi9sTdI5Oyx6i-37" edge="1" parent="1" source="r7VOtmBWi9sTdI5Oyx6i-3" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=1;endSize=8;startSize=8;fontSize=12;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" target="r7VOtmBWi9sTdI5Oyx6i-2" value="">
@@ -92,19 +92,19 @@
         <mxCell id="Xbw9OttzSYU2m0TrLEde-5" edge="1" parent="1" source="Xbw9OttzSYU2m0TrLEde-2" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="r7VOtmBWi9sTdI5Oyx6i-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Controlled Identifiers&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;Common definitions for verification methods and relationships, and key representations&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/cid-1.0/" linkTarget="_blank" id="Xbw9OttzSYU2m0TrLEde-2">
+        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Controlled Identifiers&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;i style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Common definitions for verification methods and relationships, and key representations&lt;/font&gt;&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/cid-1.0/" linkTarget="_blank" id="Xbw9OttzSYU2m0TrLEde-2">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="70" width="290" x="436" y="240" as="geometry" />
+            <mxGeometry height="80" width="290" x="436" y="240" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="&lt;font style=&quot;font-size: 20px;&quot;&gt;Data Model&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;i&gt;Graph based model of verifiable claims in JSON for Issuer-Holder-Verifier relationships&lt;/i&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-data-model/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-1">
+        <UserObject label="&lt;font style=&quot;font-size: 20px;&quot;&gt;Data Model&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;i style=&quot;&quot;&gt;Graph based model of verifiable claims for Issuer-Holder-Verifier relationships&lt;/i&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-data-model/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-1">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;strokeWidth=3;" vertex="1">
-            <mxGeometry height="80" width="280" x="440.755" y="64" as="geometry" />
+            <mxGeometry height="80" width="300" x="430" y="66" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;JSON Schema&lt;br&gt;&lt;/span&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;JSON Schemas for the structural checking of VCs&lt;/i&gt;&lt;br&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-json-schema/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-7">
+        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;JSON Schema&lt;br&gt;&lt;/span&gt;&lt;i style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;JSON Schemas for the structural checking of VCs&lt;/font&gt;&lt;/i&gt;&lt;br&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-json-schema/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-7">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="60" width="280" x="45.00500000000001" y="-76" as="geometry" />
+            <mxGeometry height="64" width="280" x="45.00500000000001" y="-76" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="Xbw9OttzSYU2m0TrLEde-3" edge="1" parent="1" source="r7VOtmBWi9sTdI5Oyx6i-6" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=1;endSize=8;startSize=8;fontSize=12;exitX=0.25;exitY=0;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="Xbw9OttzSYU2m0TrLEde-2" value="">
@@ -136,7 +136,7 @@
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 20px;&quot;&gt;Quantum-Resistant Cryptosuites&lt;/span&gt;" link="https://www.w3.org/TR/vc-di-quantum-resistant/" linkTarget="_blank" id="whtBakF46aN5u3JqghIY-1">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="50" width="215" x="320.25" y="776" as="geometry" />
+            <mxGeometry height="64" width="215" x="320.25" y="776" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="whtBakF46aN5u3JqghIY-2" edge="1" parent="1" source="whtBakF46aN5u3JqghIY-1" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=1;endSize=8;startSize=8;fontSize=12;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" target="r7VOtmBWi9sTdI5Oyx6i-2" value="">
@@ -148,30 +148,20 @@
             <mxPoint x="294.245" y="553" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Rendering Method&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;Specify preferred ways to express a VC for the end user&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-render-method/" linkTarget="_blank" id="PZ3OvfCmlgFGKLccNGj_-1">
+        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Rendering Method&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;i style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Specify preferred ways to express a VC for the end user&lt;/font&gt;&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-render-method/" linkTarget="_blank" id="PZ3OvfCmlgFGKLccNGj_-1">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="60" width="280" x="45.010000000000005" y="224" as="geometry" />
+            <mxGeometry height="64" width="280" x="45.010000000000005" y="224" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Confidence Method&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;Specify ways to increase confidence for a verifier in a VC&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-confidence-method/" linkTarget="_blank" id="PZ3OvfCmlgFGKLccNGj_-2">
+        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Confidence Method&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;i style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Specify ways to increase confidence for a verifier in a VC&lt;/font&gt;&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-confidence-method/" linkTarget="_blank" id="PZ3OvfCmlgFGKLccNGj_-2">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="60" width="280" x="43.99499999999999" y="74" as="geometry" />
+            <mxGeometry height="64" width="280" x="43.99499999999999" y="74" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="PZ3OvfCmlgFGKLccNGj_-19" edge="1" parent="1" source="r7VOtmBWi9sTdI5Oyx6i-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;curved=0;" target="PZ3OvfCmlgFGKLccNGj_-2">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="726" y="90" as="sourcePoint" />
             <mxPoint x="835.76" y="-40" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Cm7iUSekO8F5OKahWOh--11" edge="1" parent="1" source="r7VOtmBWi9sTdI5Oyx6i-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;curved=0;" target="PZ3OvfCmlgFGKLccNGj_-5">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="780" y="124" />
-              <mxPoint x="780" y="336" />
-            </Array>
-            <mxPoint x="810" y="160" as="sourcePoint" />
-            <mxPoint x="924" y="30" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Cm7iUSekO8F5OKahWOh--12" edge="1" parent="1" source="r7VOtmBWi9sTdI5Oyx6i-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;curved=0;" target="r7VOtmBWi9sTdI5Oyx6i-7">
@@ -192,61 +182,43 @@
             <mxPoint x="884" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <UserObject label="&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Barcodes&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;Express a VC in the form of a barcode&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-barcodes-1.0/" linkTarget="_blank" id="PZ3OvfCmlgFGKLccNGj_-6">
+        <UserObject label="&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Barcodes&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;i style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Express a VC in the form of a barcode&lt;/font&gt;&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-barcodes-1.0/" linkTarget="_blank" id="PZ3OvfCmlgFGKLccNGj_-6">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="60" width="280" x="834.75" y="74" as="geometry" />
+            <mxGeometry height="64" width="280" x="834.75" y="74" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Bitstring Status List&lt;br&gt;&lt;/span&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;Publishing status information for VCs using bitstrings&lt;/i&gt;&lt;br&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-bitstring-status-list/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-8">
+        <mxCell id="9VuJFdZP9M_Xq7lnsRWh-3" edge="1" parent="1" source="r7VOtmBWi9sTdI5Oyx6i-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;curved=0;" target="r7VOtmBWi9sTdI5Oyx6i-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Bitstring Status List&lt;br&gt;&lt;/span&gt;&lt;i style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Publishing VC status information using bitstrings&lt;/font&gt;&lt;/i&gt;&lt;br&gt;&lt;/font&gt;" link="https://www.w3.org/TR/vc-bitstring-status-list/" linkTarget="_blank" id="r7VOtmBWi9sTdI5Oyx6i-8">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="60" width="280" x="834.745" y="190" as="geometry" />
+            <mxGeometry height="64" width="280" x="834.745" y="190" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Forgery Defense&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;Publishing and indexed list of compact fingerprints&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-forgery-defense/" linkTarget="_blank" id="PZ3OvfCmlgFGKLccNGj_-5">
+        <mxCell id="9VuJFdZP9M_Xq7lnsRWh-4" edge="1" parent="1" source="PZ3OvfCmlgFGKLccNGj_-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;curved=0;" target="r7VOtmBWi9sTdI5Oyx6i-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Forgery Defense&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;i style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Publishing and indexed list of compact fingerprints&lt;/font&gt;&lt;/i&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-forgery-defense/" linkTarget="_blank" id="PZ3OvfCmlgFGKLccNGj_-5">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="60" width="280" x="834.745" y="306" as="geometry" />
+            <mxGeometry height="64" width="280" x="834.745" y="306" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Recognized Entities&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;i&gt;Secure that issuers are part of a specific ecosystem&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-recognized-entities/" linkTarget="_blank" id="Cm7iUSekO8F5OKahWOh--1">
+        <mxCell id="9VuJFdZP9M_Xq7lnsRWh-6" edge="1" parent="1" source="Cm7iUSekO8F5OKahWOh--1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;curved=0;" target="r7VOtmBWi9sTdI5Oyx6i-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Recognized Entities&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;i style=&quot;&quot;&gt;Secure that issuers are part of a specific ecosystem&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vc-recognized-entities/" linkTarget="_blank" id="Cm7iUSekO8F5OKahWOh--1">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
             <mxGeometry height="60" width="280" x="834.745" y="-158" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;VCALM&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;i&gt;APIs for VC Lifecycle Management&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vcalm/" linkTarget="_blank" id="Cm7iUSekO8F5OKahWOh--2">
+        <mxCell id="9VuJFdZP9M_Xq7lnsRWh-5" edge="1" parent="1" source="Cm7iUSekO8F5OKahWOh--2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;curved=0;" target="r7VOtmBWi9sTdI5Oyx6i-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;VCALM&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;i style=&quot;&quot;&gt;APIs for VC Lifecycle Management&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;" link="https://www.w3.org/TR/vcalm/" linkTarget="_blank" id="Cm7iUSekO8F5OKahWOh--2">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;fillColor=none;" vertex="1">
-            <mxGeometry height="60" width="280" x="834.745" y="-42" as="geometry" />
+            <mxGeometry height="64" width="280" x="834.745" y="-42" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="N7mbl7mFPHtfplwaVIX_-3" edge="1" parent="1" source="r7VOtmBWi9sTdI5Oyx6i-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;curved=0;" target="r7VOtmBWi9sTdI5Oyx6i-8">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="780" y="124" />
-              <mxPoint x="780" y="220" />
-            </Array>
-            <mxPoint x="740" y="134" as="sourcePoint" />
-            <mxPoint x="854" y="346" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="N7mbl7mFPHtfplwaVIX_-4" edge="1" parent="1" source="r7VOtmBWi9sTdI5Oyx6i-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;curved=0;" target="Cm7iUSekO8F5OKahWOh--2">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="780" y="84" />
-              <mxPoint x="780" y="-12" />
-            </Array>
-            <mxPoint x="740" y="72" as="sourcePoint" />
-            <mxPoint x="854" y="284" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="N7mbl7mFPHtfplwaVIX_-5" edge="1" parent="1" source="r7VOtmBWi9sTdI5Oyx6i-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;curved=0;" target="Cm7iUSekO8F5OKahWOh--1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="780" y="84" />
-              <mxPoint x="780" y="-128" />
-            </Array>
-            <mxPoint x="730" y="86" as="sourcePoint" />
-            <mxPoint x="844" y="-10" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="N7mbl7mFPHtfplwaVIX_-7" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" value="&lt;i&gt;Deployment&lt;/i&gt;" vertex="1">
           <mxGeometry height="30" width="110" x="920" y="384" as="geometry" />
         </mxCell>
